@@ -1,0 +1,28 @@
+name: Main
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  yarn:
+    name: "${{ matrix.command }}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        command:
+          - prettier:check
+          - eslint:check
+          - tsc:check
+          - test
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn --immutable --immutable-cache
+      - run: yarn ${{ matrix.command }}
