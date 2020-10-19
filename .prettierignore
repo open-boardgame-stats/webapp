@@ -1,3 +1,14 @@
 # yarn things
 .pnp.js
 .yarn/*
+
+.editorconfig
+.eslintignore
+.gitattributes
+.gitignore
+.prettierignore
+*.ico
+*.png
+*.txt
+*.svg
+yarn.lock
