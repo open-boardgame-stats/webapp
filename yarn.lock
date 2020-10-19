@@ -1264,7 +1264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.4.5, @babel/runtime@npm:^7.5.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.4.5, @babel/runtime@npm:^7.5.1, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.3, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
   version: 7.12.1
   resolution: "@babel/runtime@npm:7.12.1"
   dependencies:
@@ -1862,7 +1862,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^7.22.3":
+"@testing-library/dom@npm:^7.26.0":
   version: 7.26.1
   resolution: "@testing-library/dom@npm:7.26.1"
   dependencies:
@@ -1895,25 +1895,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:^10.4.9":
-  version: 10.4.9
-  resolution: "@testing-library/react@npm:10.4.9"
+"@testing-library/react@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "@testing-library/react@npm:11.1.0"
   dependencies:
-    "@babel/runtime": ^7.10.3
-    "@testing-library/dom": ^7.22.3
+    "@babel/runtime": ^7.11.2
+    "@testing-library/dom": ^7.26.0
   peerDependencies:
     react: "*"
     react-dom: "*"
-  checksum: 9f06d88dc13085790985543253005dca7703bda7a5e0ee2b96e0385a88b8c14b98d74951c1e2d940bcac1c231767e935f4cd90345e9202b79df57994538ad7f3
+  checksum: 73976ec3f70542c8fc67da1a0c6ac5bc99d6edcde1f1c87a8fec706df09267b76b698d19900013277bfa91d09cae22c648dd362c19b0095fc8fa1477561d18ec
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:^7.2.1":
-  version: 7.2.1
-  resolution: "@testing-library/user-event@npm:7.2.1"
+"@testing-library/user-event@npm:^12.1.8":
+  version: 12.1.8
+  resolution: "@testing-library/user-event@npm:12.1.8"
+  dependencies:
+    "@babel/runtime": ^7.10.2
   peerDependencies:
-    "@testing-library/dom": ">=5"
-  checksum: ab663d5e0b31b5e15c82922ca1bdb6968122656ad7df5446c4468e8f3f0f95dfd92f740eac303dfd0b331b554edc4a99443adbd0074379e65de398313f292936
+    "@testing-library/dom": ">=7.21.4"
+  checksum: c9c4c34f341346cb64f2d62bd8f05220d5f958aa222264a44fb4c14cc08387472c9ac8ee3903c9851b536d7093f508183ab55e5910417ecf2e9b94a6d94e3bf7
   languageName: node
   linkType: hard
 
@@ -11185,8 +11187,8 @@ fsevents@^1.2.7:
   dependencies:
     "@material-ui/core": ^4.11.0
     "@testing-library/jest-dom": ^4.2.4
-    "@testing-library/react": ^10.4.9
-    "@testing-library/user-event": ^7.2.1
+    "@testing-library/react": ^11.1.0
+    "@testing-library/user-event": ^12.1.8
     "@types/jest": ^24.0.0
     "@types/node": ^12.12.68
     "@types/react": ^16.9.53
