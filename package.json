@@ -26,6 +26,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
+    "rechart": "^0.0.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
