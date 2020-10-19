@@ -17,6 +17,7 @@ jobs:
           - eslint:check
           - tsc:check
           - test
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v2
