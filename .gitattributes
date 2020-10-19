@@ -1,0 +1,2 @@
+# Mark .pnp.js as binary to prevent git from trying to merge it
+/.pnp.js binary
