@@ -1996,6 +1996,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/d3-path@npm:^1":
+  version: 1.0.9
+  resolution: "@types/d3-path@npm:1.0.9"
+  checksum: ac5319e75d07707fa7a354d85ad72122dcd956a08f1e60dc49162a34b5739f126ccf4a9484aefbd7e7a5e81554053a17b4d83aeedaea947889ae41b38406771c
+  languageName: node
+  linkType: hard
+
+"@types/d3-shape@npm:^1":
+  version: 1.3.4
+  resolution: "@types/d3-shape@npm:1.3.4"
+  dependencies:
+    "@types/d3-path": ^1
+  checksum: 5649876f4b52cc4c59a5f6af7a0164dc0b1920e5e4da94e711e10f3b1d28975593c867935987345f917bd99d2a7d24d1332c0e42ed2cbf9fa594bdd7e3b8374a
+  languageName: node
+  linkType: hard
+
 "@types/emscripten@npm:^1.38.0":
   version: 1.39.4
   resolution: "@types/emscripten@npm:1.39.4"
@@ -2204,6 +2220,16 @@ __metadata:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: 01c646c8f08306660441a14495e926c0362114da7813c3bc3d4d58b47590ee92274bbbff18f3fafd465a09369daa25982d68ba6628f1080120b62d40ce75ca40
+  languageName: node
+  linkType: hard
+
+"@types/recharts@npm:^1.8.16":
+  version: 1.8.16
+  resolution: "@types/recharts@npm:1.8.16"
+  dependencies:
+    "@types/d3-shape": ^1
+    "@types/react": "*"
+  checksum: f13158ffe9551e1cb2d603e9d4fdd9c3041004381cf05fe2f25f064f31bf78c9c213923fe361a1dc085d07e6c9ff57fcbb63d0e6ee7b09e9456ff7daf85fdc1d
   languageName: node
   linkType: hard
 
@@ -11298,6 +11324,7 @@ fsevents@^1.2.7:
     "@types/react": ^16.9.53
     "@types/react-dom": ^16.9.8
     "@types/react-router-dom": ^5.1.6
+    "@types/recharts": ^1.8.16
     "@typescript-eslint/eslint-plugin": 2.x
     "@typescript-eslint/parser": 2.x
     "@yarnpkg/pnpify": ^2.3.3

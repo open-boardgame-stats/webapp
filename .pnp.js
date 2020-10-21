@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.9.53"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@types/react-router-dom", "npm:5.1.6"],
+            ["@types/recharts", "npm:1.8.16"],
             ["@typescript-eslint/eslint-plugin", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.34.0"],
             ["@typescript-eslint/parser", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.34.0"],
             ["@yarnpkg/pnpify", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.3.3"],
@@ -2578,6 +2579,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/d3-path", [
+        ["npm:1.0.9", {
+          "packageLocation": "./.yarn/cache/@types-d3-path-npm-1.0.9-76aa062ec1-ac5319e75d.zip/node_modules/@types/d3-path/",
+          "packageDependencies": [
+            ["@types/d3-path", "npm:1.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/d3-shape", [
+        ["npm:1.3.4", {
+          "packageLocation": "./.yarn/cache/@types-d3-shape-npm-1.3.4-b21275bafe-5649876f4b.zip/node_modules/@types/d3-shape/",
+          "packageDependencies": [
+            ["@types/d3-shape", "npm:1.3.4"],
+            ["@types/d3-path", "npm:1.0.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/emscripten", [
         ["npm:1.39.4", {
           "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.39.4-4d03380faa-b848421e25.zip/node_modules/@types/emscripten/",
@@ -2821,6 +2841,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-transition-group-npm-4.4.0-dc81edfd45-b761f70623.zip/node_modules/@types/react-transition-group/",
           "packageDependencies": [
             ["@types/react-transition-group", "npm:4.4.0"],
+            ["@types/react", "npm:16.9.53"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/recharts", [
+        ["npm:1.8.16", {
+          "packageLocation": "./.yarn/cache/@types-recharts-npm-1.8.16-01fb659ba1-f13158ffe9.zip/node_modules/@types/recharts/",
+          "packageDependencies": [
+            ["@types/recharts", "npm:1.8.16"],
+            ["@types/d3-shape", "npm:1.3.4"],
             ["@types/react", "npm:16.9.53"]
           ],
           "linkType": "HARD",
@@ -13076,6 +13107,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.9.53"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@types/react-router-dom", "npm:5.1.6"],
+            ["@types/recharts", "npm:1.8.16"],
             ["@typescript-eslint/eslint-plugin", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.34.0"],
             ["@typescript-eslint/parser", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.34.0"],
             ["@yarnpkg/pnpify", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:2.3.3"],
