@@ -2017,6 +2017,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/faker@npm:^5.1.2":
+  version: 5.1.2
+  resolution: "@types/faker@npm:5.1.2"
+  checksum: 3a7b0191b7d2e3677231339ce5a9dab6a628e7a25c2d7112166609f248a7e3cf02d1bb9fbcb84e5fdb78e56554a3c01cfe6f7651683c7e7fc65f5dead9c641ca
+  languageName: node
+  linkType: hard
+
 "@types/glob@npm:^7.1.1":
   version: 7.1.1
   resolution: "@types/glob@npm:7.1.1"
@@ -6452,6 +6459,13 @@ __metadata:
   version: 1.4.0
   resolution: "extsprintf@npm:1.4.0"
   checksum: 092e011574324c5cddd78b5a27f869c2703613c1140eb7763aef8f5b0e33769a9b4c7dbcc50acd39b6afebe79bf66adcec73bf3c84e095c5bcfb42306d128ad0
+  languageName: node
+  linkType: hard
+
+"faker@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "faker@npm:5.1.0"
+  checksum: cc0a0c2b2952d0e7ddad67ec6302aa097d916c0bbb7baa2240a02ecdee4f42df260a233c5be108f782302e63b246add181d859ead9026687db9284050672084a
   languageName: node
   linkType: hard
 
@@ -11278,6 +11292,7 @@ fsevents@^1.2.7:
     "@testing-library/jest-dom": ^4.2.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.8
+    "@types/faker": ^5.1.2
     "@types/jest": ^24.0.0
     "@types/node": ^12.12.68
     "@types/react": ^16.9.53
@@ -11294,6 +11309,7 @@ fsevents@^1.2.7:
     eslint-plugin-jsx-a11y: 6.x
     eslint-plugin-react: 7.x
     eslint-plugin-react-hooks: 2.x
+    faker: ^5.1.0
     prettier: ^2.1.2
     react: ^16.14.0
     react-dom: ^16.14.0
