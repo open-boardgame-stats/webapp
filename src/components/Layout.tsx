@@ -3,10 +3,12 @@ import {
   AppBar,
   Box,
   IconButton,
+  Link,
   makeStyles,
   Toolbar,
 } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   button: {
@@ -21,9 +23,11 @@ const Layout: React.FC = ({ children }) => {
     <>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.button}>
-            <PersonIcon />
-          </IconButton>
+          <Link className={classes.button} component={RouterLink} to="/profile">
+            <IconButton>
+              <PersonIcon />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
       <Box display="flex" flex="1">

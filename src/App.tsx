@@ -5,6 +5,7 @@ import { CssBaseline, MuiThemeProvider } from "@material-ui/core";
 import "./App.css";
 import Home from "./pages/Home";
 import theme from "./theme";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -12,8 +13,11 @@ function App() {
       <CssBaseline />
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </Router>
