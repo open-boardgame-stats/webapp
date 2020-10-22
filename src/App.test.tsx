@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders the Welcome message", () => {
   const { getByText } = render(<App />);
-  const welcomeElement = getByText(/welcome/i);
+  const welcomeElement = getByText(/Hitler/i);
   expect(welcomeElement).toBeInTheDocument();
 });

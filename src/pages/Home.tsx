@@ -1,12 +1,14 @@
-import { Typography, Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import React from "react";
 import Layout from "../components/Layout";
+
+import SecretHitlerForm from "../pages/games/secret-hitler/Form";
 
 const Home = () => {
   return (
     <Layout>
-      <Box display="flex" flex="1" justifyContent="center" alignItems="center">
-        <Typography variant="h3">Welcome</Typography>
+      <Box>
+        <SecretHitlerForm />
       </Box>
     </Layout>
   );
