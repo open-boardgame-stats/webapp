@@ -16,5 +16,7 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "jest.autoEnable": true,
+  "jest.pathToJest": "yarn test"
 }
