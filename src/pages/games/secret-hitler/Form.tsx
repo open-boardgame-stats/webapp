@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Button,
-  MenuItem,
   Typography,
   TextField,
   FormControl,
@@ -11,51 +10,10 @@ import {
   Radio,
   FormControlLabel,
 } from "@material-ui/core";
-
-type ValueOf<T> = T[keyof T];
-type Player = {
-  name: string;
-  party: "liberal" | "fascist" | "hitler";
-};
-
-const roles = [
-  {
-    value: "liberal",
-    label: "Liberal",
-  },
-  {
-    value: "fascist",
-    label: "Fascist",
-  },
-  {
-    value: "hitler",
-    label: "Hitler",
-  },
-];
-const emptyPlayer: Player = {
-  name: "",
-  party: "liberal",
-};
+import PlayerRow from "./PlayerRow";
 
 const Form = () => {
   const [playersNum, setPlayersNum] = React.useState(6);
-  const [players, setPlayers] = React.useState<Player[]>(
-    Array(playersNum).fill(emptyPlayer)
-  );
-
-  const handlePlayerChange = (
-    field: keyof Player,
-    value: ValueOf<Player>,
-    playerNum: number
-  ) => {
-    const newPlayers = [...players];
-    newPlayers.splice(playerNum, 1, {
-      ...newPlayers[playerNum],
-      [field]: value,
-    });
-
-    setPlayers(newPlayers);
-  };
 
   return (
     <Box ml={2} mt={2}>
@@ -68,41 +26,9 @@ const Form = () => {
         onChange={(e) => setPlayersNum(parseInt(e.currentTarget.value))}
         type="number"
       />
-      {Array.from(Array(playersNum).keys()).map((playerNum) => {
-        return (
-          <Box mt={2} key={playerNum}>
-            <TextField
-              label={`Player #${playerNum + 1}`}
-              onChange={(e) => {
-                handlePlayerChange(
-                  "name",
-                  e.currentTarget.value as Player["name"],
-                  playerNum
-                );
-              }}
-              value={players[playerNum]?.["name"] || ""}
-            />
-            <TextField
-              select
-              label="Role"
-              value={players[playerNum]["party"]}
-              onChange={(e) => {
-                handlePlayerChange(
-                  "party",
-                  e.target.value as Player["party"],
-                  playerNum
-                );
-              }}
-            >
-              {roles.map((role) => (
-                <MenuItem key={role.value} value={role.value}>
-                  {role.label}
-                </MenuItem>
-              ))}
-            </TextField>
-          </Box>
-        );
-      })}
+      {Array.from(Array(playersNum).keys()).map((playerNum) => (
+        <PlayerRow label={`Player #${playerNum}`} key={playerNum} />
+      ))}
       <Box mt={2}>
         <FormControl component="fieldset">
           <FormLabel component="legend">Who won?</FormLabel>
