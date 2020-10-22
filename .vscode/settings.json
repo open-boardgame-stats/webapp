@@ -6,6 +6,9 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "eslint.nodePath": ".yarn/sdks",
   "[yaml]": {
@@ -13,5 +16,7 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "jest.autoEnable": true,
+  "jest.pathToJest": "yarn test"
 }
