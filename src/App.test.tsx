@@ -2,8 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import App from "./App";
 
-test("renders the Welcome message", () => {
+test("renders the Hitler message", () => {
   const { getByText } = render(<App />);
-  const welcomeElement = getByText(/welcome/i);
-  expect(welcomeElement).toBeInTheDocument();
+  const hitlerElement = getByText(/Hitler/i);
+  expect(hitlerElement).toBeInTheDocument();
 });
