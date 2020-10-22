@@ -27,7 +27,7 @@ const Form = () => {
         type="number"
       />
       {Array.from(Array(playersNum).keys()).map((playerNum) => (
-        <PlayerRow label={`Player #${playerNum}`} key={playerNum} />
+        <PlayerRow label={`Player #${playerNum + 1}`} key={playerNum} />
       ))}
       <Box mt={2}>
         <FormControl component="fieldset">

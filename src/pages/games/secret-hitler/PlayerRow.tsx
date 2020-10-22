@@ -25,14 +25,14 @@ type Props = {
   label: string;
 };
 
-const PlayerRow: React.FC<Props> = () => {
+const PlayerRow: React.FC<Props> = ({ label }) => {
   const [name, setName] = useState("");
   const [party, setParty] = useState<Player["party"]>("liberal");
 
   return (
     <Box mt={2}>
       <TextField
-        label={`Player #`}
+        label={label}
         onChange={(e) => {
           setName(e.currentTarget.value);
         }}
