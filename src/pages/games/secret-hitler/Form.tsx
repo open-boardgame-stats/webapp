@@ -83,13 +83,13 @@ const Form = () => {
               value={players[playerNum]?.["name"] || ""}
             />
             <TextField
-              label="Role"
               select
+              label="Role"
               value={players[playerNum]["party"]}
               onChange={(e) => {
                 handlePlayerChange(
                   "party",
-                  e.currentTarget.value as Player["party"],
+                  e.target.value as Player["party"],
                   playerNum
                 );
               }}
@@ -106,7 +106,7 @@ const Form = () => {
       <Box mt={2}>
         <FormControl component="fieldset">
           <FormLabel component="legend">Who won?</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1">
+          <RadioGroup>
             <FormControlLabel
               value="liberal"
               control={<Radio />}
