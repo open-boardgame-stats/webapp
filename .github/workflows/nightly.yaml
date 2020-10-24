@@ -37,8 +37,8 @@ jobs:
       - yarn
 
     steps:
-    - name: Discord notification
-      uses: nobrayner/discord-webhook@v1
-      with:
-        github-token: ${{ secrets.github_token }}
-        discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Discord notification
+        uses: nobrayner/discord-webhook@v1
+        with:
+          github-token: ${{ secrets.github_token }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
