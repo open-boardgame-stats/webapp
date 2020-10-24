@@ -8601,6 +8601,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"jest-pnp-resolver@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "jest-pnp-resolver@npm:1.2.2"
+  peerDependencies:
+    jest-resolve: "*"
+  peerDependenciesMeta:
+    jest-resolve:
+      optional: true
+  checksum: d91c86e3899f35ac1a6d40fa29e94212fc9b8e5e70d31d77ff281413441c844ec44a3673a3860f9b2155fed6738548f52eee9e63845e8d5f8550a890533c78cc
+  languageName: node
+  linkType: hard
+
 "jest-regex-util@npm:^24.3.0, jest-regex-util@npm:^24.9.0":
   version: 24.9.0
   resolution: "jest-regex-util@npm:24.9.0"
@@ -11197,6 +11209,7 @@ fsevents@~2.1.2:
     identity-obj-proxy: 3.0.0
     jest: 24.9.0
     jest-environment-jsdom-fourteen: 1.0.1
+    jest-pnp-resolver: ^1.2.2
     jest-resolve: 24.9.0
     jest-watch-typeahead: 0.4.2
     mini-css-extract-plugin: 0.9.0

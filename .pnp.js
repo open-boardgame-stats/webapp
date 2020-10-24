@@ -79,6 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "npm:24.9.0"],
             ["jest-environment-jsdom-fourteen", "npm:1.0.1"],
+            ["jest-pnp-resolver", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:1.2.2"],
             ["jest-resolve", "npm:24.9.0"],
             ["jest-watch-typeahead", "npm:0.4.2"],
             ["mini-css-extract-plugin", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:0.9.0"],
@@ -10108,6 +10109,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "jest-resolve"
           ],
           "linkType": "HARD",
+        }],
+        ["virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:1.2.2", {
+          "packageLocation": "./.yarn/$$virtual/jest-pnp-resolver-virtual-de5f044463/0/cache/jest-pnp-resolver-npm-1.2.2-da20f8bdfe-d91c86e389.zip/node_modules/jest-pnp-resolver/",
+          "packageDependencies": [
+            ["jest-pnp-resolver", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:1.2.2"],
+            ["@types/jest-resolve", null],
+            ["jest-resolve", "npm:24.9.0"]
+          ],
+          "packagePeers": [
+            "@types/jest-resolve",
+            "jest-resolve"
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["jest-regex-util", [
@@ -12950,6 +12964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "npm:24.9.0"],
             ["jest-environment-jsdom-fourteen", "npm:1.0.1"],
+            ["jest-pnp-resolver", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:1.2.2"],
             ["jest-resolve", "npm:24.9.0"],
             ["jest-watch-typeahead", "npm:0.4.2"],
             ["mini-css-extract-plugin", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:0.9.0"],
