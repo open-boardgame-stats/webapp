@@ -1,2 +1,3 @@
 # Mark .pnp.js as binary to prevent git from trying to merge it
-/.pnp.js binary
+/.pnp.js binary linguist-generated=true
+/.yarn/cache/*.zip binary linguist-generated=true

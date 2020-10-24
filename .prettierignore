@@ -12,3 +12,5 @@
 *.txt
 *.svg
 yarn.lock
+
+/build

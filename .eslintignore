@@ -1,3 +1,7 @@
 # yarn things
 .pnp.js
 .yarn/*
+
+/build
+/config
+/scripts
