@@ -62,8 +62,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["camelcase", "npm:5.3.1"],
             ["case-sensitive-paths-webpack-plugin", "npm:2.3.0"],
             ["css-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:3.4.2"],
-            ["dotenv", "npm:8.2.0"],
-            ["dotenv-expand", "npm:5.1.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-react-app", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:5.2.1"],
             ["eslint-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:3.0.3"],
@@ -6689,24 +6687,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["dotenv", [
-        ["npm:8.2.0", {
-          "packageLocation": "./.yarn/cache/dotenv-npm-8.2.0-6b21df4d37-16cb89cbd7.zip/node_modules/dotenv/",
-          "packageDependencies": [
-            ["dotenv", "npm:8.2.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["dotenv-expand", [
-        ["npm:5.1.0", {
-          "packageLocation": "./.yarn/cache/dotenv-expand-npm-5.1.0-c3fff50eb5-b895c6220d.zip/node_modules/dotenv-expand/",
-          "packageDependencies": [
-            ["dotenv-expand", "npm:5.1.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["duplexer", [
         ["npm:0.1.1", {
           "packageLocation": "./.yarn/cache/duplexer-npm-0.1.1-d906abcf74-cd332f728a.zip/node_modules/duplexer/",
@@ -12947,8 +12927,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["camelcase", "npm:5.3.1"],
             ["case-sensitive-paths-webpack-plugin", "npm:2.3.0"],
             ["css-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:3.4.2"],
-            ["dotenv", "npm:8.2.0"],
-            ["dotenv-expand", "npm:5.1.0"],
             ["eslint", "npm:6.8.0"],
             ["eslint-config-react-app", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:5.2.1"],
             ["eslint-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:3.0.3"],

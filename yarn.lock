@@ -5557,20 +5557,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-expand@npm:5.1.0":
-  version: 5.1.0
-  resolution: "dotenv-expand@npm:5.1.0"
-  checksum: b895c6220d345db8f58dca439d3bc65c2ee538659df570ed3fa8c99487df854afd6d1ddadf1e43a4091c9ed6166956e7db7bc5a05cf48fa812c0772e1f5cf860
-  languageName: node
-  linkType: hard
-
-"dotenv@npm:8.2.0":
-  version: 8.2.0
-  resolution: "dotenv@npm:8.2.0"
-  checksum: 16cb89cbd7b98b053899b8aba8c5044c8fb61a2db8a81fe70360b75035fce5fed53bd7a34d772be717d0880c0321122a4c09423f518025e1b52d96791521b1a7
-  languageName: node
-  linkType: hard
-
 "duplexer@npm:^0.1.1":
   version: 0.1.1
   resolution: "duplexer@npm:0.1.1"
@@ -11192,8 +11178,6 @@ fsevents@~2.1.2:
     camelcase: ^5.3.1
     case-sensitive-paths-webpack-plugin: 2.3.0
     css-loader: 3.4.2
-    dotenv: 8.2.0
-    dotenv-expand: 5.1.0
     eslint: ^6.6.0
     eslint-config-react-app: ^5.2.1
     eslint-loader: 3.0.3
