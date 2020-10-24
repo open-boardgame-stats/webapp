@@ -1,4 +1,5 @@
 module.exports = {
+  resolver: require.resolve(`jest-pnp-resolver`),
   roots: ["<rootDir>/src"],
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
   setupFiles: ["react-app-polyfill/jsdom"],
@@ -9,7 +10,7 @@ module.exports = {
   ],
   testEnvironment: "jest-environment-jsdom-fourteen",
   transform: {
-    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
     "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
     "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)":
       "<rootDir>/config/jest/fileTransform.js",
@@ -17,6 +18,7 @@ module.exports = {
   transformIgnorePatterns: [
     "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
     "^.+\\.module\\.(css|sass|scss)$",
+    "\\.pnp\\.[^\\/]+$",
   ],
   modulePaths: [],
   moduleNameMapper: {
