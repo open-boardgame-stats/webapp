@@ -3,14 +3,16 @@
     "**/.yarn": true,
     "**/.pnp.*": true
   },
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "eslint.nodePath": ".yarn/sdks",
+  "jest.autoEnable": true,
+  "jest.pathToJest": "yarn test",
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -28,7 +30,5 @@
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "jest.autoEnable": true,
-  "jest.pathToJest": "yarn test"
+  }
 }
