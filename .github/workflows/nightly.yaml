@@ -1,0 +1,44 @@
+name: Nightly
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  yarn:
+    name: "${{ matrix.command }}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        command:
+          - prettier:check
+          - eslint:check
+          - tsc:check
+          - test
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn --immutable --immutable-cache
+      - run: yarn ${{ matrix.command }}
+
+  failure-notification:
+    name: Notify team on nightly failure
+    runs-on: ubuntu-latest
+
+    if: failure()
+    needs:
+      - yarn
+
+    steps:
+      - name: Discord notification
+        uses: nobrayner/discord-webhook@v1
+        with:
+          github-token: ${{ secrets.github_token }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK }}
