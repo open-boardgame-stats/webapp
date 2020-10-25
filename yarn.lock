@@ -4215,7 +4215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4":
+"clsx@npm:^1.0.4, clsx@npm:^1.1.1":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
   checksum: d8ae10ac0546da19fe8c9516886f6582a64a382cf4d09ea7d36d5287cafbdab1192ab249adc2cdf0310e0b0aeac4f4142cf7c738c98d9cb68c19ba24b6f673d5
@@ -11177,6 +11177,7 @@ fsevents@~2.1.2:
     babel-preset-react-app: ^9.1.2
     camelcase: ^5.3.1
     case-sensitive-paths-webpack-plugin: 2.3.0
+    clsx: ^1.1.1
     css-loader: 3.4.2
     eslint: ^6.6.0
     eslint-config-react-app: ^5.2.1
