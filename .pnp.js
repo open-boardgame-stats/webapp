@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.9.0"],
             ["@material-ui/core", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.11.0"],
             ["@material-ui/icons", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.9.1"],
+            ["@material-ui/lab", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.0.0-alpha.56"],
             ["@svgr/webpack", "npm:4.3.3"],
             ["@testing-library/jest-dom", "npm:4.2.4"],
             ["@testing-library/react", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:11.1.0"],
@@ -2148,6 +2149,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/types__react", null],
             ["react", "npm:16.14.0"],
             ["react-dom", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:16.14.0"]
+          ],
+          "packagePeers": [
+            "@material-ui/core",
+            "@types/material-ui__core",
+            "@types/react-dom",
+            "@types/react",
+            "@types/types__react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@material-ui/lab", [
+        ["virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.0.0-alpha.56", {
+          "packageLocation": "./.yarn/$$virtual/@material-ui-lab-virtual-b67c96e9c9/0/cache/@material-ui-lab-npm-4.0.0-alpha.56-dc8cf118f0-ed04d1f6c3.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.0.0-alpha.56"],
+            ["@babel/runtime", "npm:7.12.1"],
+            ["@material-ui/core", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.11.0"],
+            ["@material-ui/utils", "virtual:34903b84f767a905b7014aacfce2a56cba26ffdb99dd06d407346e89b8a5abf3d17d484e298e36396c6cb44a31259811c0cfb160540bd57ae9c805a7156fb7fb#npm:4.10.2"],
+            ["@types/material-ui__core", null],
+            ["@types/react", "npm:16.9.53"],
+            ["@types/react-dom", "npm:16.9.8"],
+            ["@types/types__react", null],
+            ["clsx", "npm:1.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:16.14.0"],
+            ["react-dom", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:16.14.0"],
+            ["react-is", "npm:16.13.1"]
           ],
           "packagePeers": [
             "@material-ui/core",
@@ -12906,6 +12937,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.9.0"],
             ["@material-ui/core", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.11.0"],
             ["@material-ui/icons", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.9.1"],
+            ["@material-ui/lab", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:4.0.0-alpha.56"],
             ["@svgr/webpack", "npm:4.3.3"],
             ["@testing-library/jest-dom", "npm:4.2.4"],
             ["@testing-library/react", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:11.1.0"],
