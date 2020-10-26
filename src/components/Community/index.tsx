@@ -1,14 +1,8 @@
 import faker from "faker";
 
-export interface Community {
-  id: string;
-  name: string;
-  imageUrl: string;
-  description: string;
-  members: number;
-}
+import Community from "../../types/Community";
 
-export const generate = () => ({
+export const generate: () => Community = () => ({
   id: faker.random.uuid(),
   name: faker.company.companyName(),
   description: faker.lorem.paragraph(5),
@@ -16,7 +10,7 @@ export const generate = () => ({
   members: faker.random.number(1000),
 });
 
-export const generateMultiple = (n: number) =>
+export const generateMultiple: (n: number) => Community[] = (n) =>
   Array(n)
     .fill(1)
     .map(() => generate());

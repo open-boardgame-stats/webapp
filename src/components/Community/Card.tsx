@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import PeopleIcon from "@material-ui/icons/People";
 
-import { Community } from ".";
+import Community from "../../types/Community";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({

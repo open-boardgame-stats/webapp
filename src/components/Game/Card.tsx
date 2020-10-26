@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-import { Game } from ".";
+import Game from "../../types/Game";
 
 const useStyles = makeStyles({
   root: {

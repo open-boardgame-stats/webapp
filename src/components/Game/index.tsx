@@ -1,12 +1,6 @@
 import faker from "faker";
 
-export interface Game {
-  id: string;
-  name: string;
-  imageUrl: string;
-  description: string;
-  matches: number;
-}
+import Game from "../../types/Game";
 
 export const hitler: Game = {
   id: "secret_hitler",
