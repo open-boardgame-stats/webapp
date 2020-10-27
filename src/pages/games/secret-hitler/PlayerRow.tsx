@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { Box, TextField, MenuItem } from "@material-ui/core";
+import React from "react";
+import { Box, MenuItem } from "@material-ui/core";
+import { TextField } from "mui-rff";
+import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 
 const roles = [
   {
@@ -16,37 +18,33 @@ const roles = [
   },
 ];
 
-type Player = {
-  name: string;
-  party: "liberal" | "fascist" | "hitler";
-};
-
 type Props = {
-  label: string;
+  index: number;
+  name: string;
+  remove: () => void;
+  removable: boolean;
 };
 
-const PlayerRow: React.FC<Props> = ({ label }) => {
-  const [name, setName] = useState("");
-  const [party, setParty] = useState<Player["party"]>("liberal");
-
+const PlayerRow: React.FC<Props> = ({
+  name,
+  index,
+  remove,
+  removable = false,
+}) => {
   return (
-    <Box mt={2}>
+    <Box mt={2} alignItems="center" textAlign="center" display="flex">
       <TextField
-        label={label}
-        onChange={(e) => {
-          setName(e.currentTarget.value);
-        }}
-        name="name"
-        value={name}
+        style={{ width: "auto" }}
+        label={`Player #${index + 1}`}
+        name={`${name}.name`}
+        required={true}
       />
       <TextField
+        style={{ width: "auto", minWidth: "100px" }}
         select
         label="Role"
-        name="party"
-        value={party}
-        onChange={(e) => {
-          setParty(e.target.value as Player["party"]);
-        }}
+        name={`${name}.party`}
+        required={true}
       >
         {roles.map((role) => (
           <MenuItem key={role.value} value={role.value}>
@@ -54,6 +52,7 @@ const PlayerRow: React.FC<Props> = ({ label }) => {
           </MenuItem>
         ))}
       </TextField>
+      {removable && <RemoveCircleOutlineIcon onClick={remove} />}
     </Box>
   );
 };
