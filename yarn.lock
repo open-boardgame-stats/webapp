@@ -5953,22 +5953,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-loader@npm:3.0.3":
-  version: 3.0.3
-  resolution: "eslint-loader@npm:3.0.3"
-  dependencies:
-    fs-extra: ^8.1.0
-    loader-fs-cache: ^1.0.2
-    loader-utils: ^1.2.3
-    object-hash: ^2.0.1
-    schema-utils: ^2.6.1
-  peerDependencies:
-    eslint: ^5.0.0 || ^6.0.0
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: fc71a64d88949b56231f56227449ee855f5e5583c70af805097c5ed828ee4d9b7f553f65e07c9ed11ec1ccb84529c34c2c410890e29fcfc2b88225a4ad2c2cdf
-  languageName: node
-  linkType: hard
-
 "eslint-module-utils@npm:^2.6.0":
   version: 2.6.0
   resolution: "eslint-module-utils@npm:2.6.0"
@@ -6158,7 +6142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.12.0":
+"eslint@npm:^7.12.1":
   version: 7.12.1
   resolution: "eslint@npm:7.12.1"
   dependencies:
@@ -6662,17 +6646,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-cache-dir@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "find-cache-dir@npm:0.1.1"
-  dependencies:
-    commondir: ^1.0.1
-    mkdirp: ^0.5.1
-    pkg-dir: ^1.0.0
-  checksum: 3097d0185122d2b944edaa727bb1575177d0b128f72a45ac9c79ff1d99100a3dd1bb967a7697e028b941ab1153c593aae34423ed852042e4568d23dabafaa297
-  languageName: node
-  linkType: hard
-
 "find-cache-dir@npm:^2.1.0":
   version: 2.1.0
   resolution: "find-cache-dir@npm:2.1.0"
@@ -6702,16 +6675,6 @@ __metadata:
     locate-path: ^5.0.0
     path-exists: ^4.0.0
   checksum: d612d28e02eaca6cd7128fc9bc9b456e2547a3f9875b2b2ae2dbdc6b8cec52bc2885efcb3ac6c18954e838f4c8e20565d196784b190e1d38565f9dc39aade722
-  languageName: node
-  linkType: hard
-
-"find-up@npm:^1.0.0":
-  version: 1.1.2
-  resolution: "find-up@npm:1.1.2"
-  dependencies:
-    path-exists: ^2.0.0
-    pinkie-promise: ^2.0.0
-  checksum: cc15a62434c3f7f499d2f8c956aeeace97a8e87ad52ad78e156bd52e9c2acafcaad729356b564d0d57150b48017d0d3165ba2e790546550b3de8b7db256b883b
   languageName: node
   linkType: hard
 
@@ -6872,17 +6835,6 @@ __metadata:
     jsonfile: ^4.0.0
     universalify: ^0.1.0
   checksum: 0de3773953a13b517f053dbfa291166da076cc563cdd8f0ecefc64018ab15d2614f1707860b82e6b0e41695f613c1855f410749bd01bcb585f0243b1018a6595
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "fs-extra@npm:8.1.0"
-  dependencies:
-    graceful-fs: ^4.2.0
-    jsonfile: ^4.0.0
-    universalify: ^0.1.0
-  checksum: 056a96d4f55ab8728b021e251175a4a6440d1edb5845e6c2e8e010019bde3e63de188a0eb99386c21c71804ca1a571cd6e08f507971f10a2bc4f4f7667720fa4
   languageName: node
   linkType: hard
 
@@ -9220,16 +9172,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"loader-fs-cache@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "loader-fs-cache@npm:1.0.3"
-  dependencies:
-    find-cache-dir: ^0.1.1
-    mkdirp: ^0.5.1
-  checksum: 7fa16d623f529288bb961a6ba68f4e756e18b5611de9ef10f4d9d72d70ba149fa2a0d51f79c282d5bb59d7c3ce184d20b6d1d68b9bc618b45c7e1940a6be47df
-  languageName: node
-  linkType: hard
-
 "loader-runner@npm:^2.4.0":
   version: 2.4.0
   resolution: "loader-runner@npm:2.4.0"
@@ -10199,9 +10141,8 @@ fsevents@^1.2.7:
     clsx: ^1.1.1
     css-loader: 3.4.2
     date-fns: ^2.16.1
-    eslint: ^7.12.0
+    eslint: ^7.12.1
     eslint-config-react-app: ^6.0.0
-    eslint-loader: 3.0.3
     eslint-plugin-flowtype: ^5.2.0
     eslint-plugin-import: ^2.22.1
     eslint-plugin-jest: ^24.1.0
@@ -10262,13 +10203,6 @@ fsevents@^1.2.7:
     define-property: ^0.2.5
     kind-of: ^3.0.3
   checksum: d91d46e54297cad0544f04e4dff4694f92aca9661f59ad7e803a1ba94a2bb24b38ca4fd59ea827d24c9bdc6f7148d5c838287ee4b2b9c5df9b445b1c0d7a066c
-  languageName: node
-  linkType: hard
-
-"object-hash@npm:^2.0.1":
-  version: 2.0.3
-  resolution: "object-hash@npm:2.0.3"
-  checksum: e633ae67cd6c5f3cd52af5bef0fe7f25d597b415a6d92a601be0b97a47642908cf333cedfc9e848d25b6c51fd6cf6e64ff6eb3af710eae249a42f6a69ad6b12d
   languageName: node
   linkType: hard
 
@@ -10721,15 +10655,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"path-exists@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "path-exists@npm:2.1.0"
-  dependencies:
-    pinkie-promise: ^2.0.0
-  checksum: 71664885c56b48b543b0ccf2fca9d06c022ad88b6431a8d7c32ad8cba94a8e457b31cfc0ceeee7417be31d8e59574b1cb4a4551cb1efffb91f64f74034daea3d
-  languageName: node
-  linkType: hard
-
 "path-exists@npm:^3.0.0":
   version: 3.0.0
   resolution: "path-exists@npm:3.0.0"
@@ -10874,15 +10799,6 @@ fsevents@^1.2.7:
   dependencies:
     node-modules-regexp: ^1.0.0
   checksum: 21604008c36ab6e14ac458e1a267dd7322cfd36b9e1042e9e277dd064582717e30b9aba8c0a47d738bf004ee7946ed27f6b982d30968534f2c6b5b168a52b555
-  languageName: node
-  linkType: hard
-
-"pkg-dir@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "pkg-dir@npm:1.0.0"
-  dependencies:
-    find-up: ^1.0.0
-  checksum: bde536bc8f27a677514cd63de9eeb0af09666820699a7bded5aa51789a016991cb72a835612442201a4ba6f4a9646ea524c6e14507ef2ecdb8553f99dd7ec622
   languageName: node
   linkType: hard
 
@@ -12262,7 +12178,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.6.0, schema-utils@npm:^2.6.1, schema-utils@npm:^2.6.5, schema-utils@npm:^2.7.0":
+"schema-utils@npm:^2.6.0, schema-utils@npm:^2.6.5, schema-utils@npm:^2.7.0":
   version: 2.7.1
   resolution: "schema-utils@npm:2.7.1"
   dependencies:
