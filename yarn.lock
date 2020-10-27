@@ -9462,7 +9462,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
+"loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
   version: 1.4.0
   resolution: "loader-utils@npm:1.4.0"
   dependencies:
@@ -11209,7 +11209,6 @@ fsevents@^2.1.2:
     react-router-dom: ^5.2.0
     recharts: ^1.8.5
     semver: 6.3.0
-    style-loader: 0.23.1
     terser-webpack-plugin: 2.3.8
     ts-pnp: 1.1.6
     typescript: ^4.0.5
@@ -13370,16 +13369,6 @@ fsevents@^2.1.2:
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
   checksum: e60d99aa2849c27a04dce0620334f45822197df6b83664dd3746971e9a0a766d989dbb8d87f9cb7350725d2b5df401a2343222ad06e36a1ba7d62c6633267fcb
-  languageName: node
-  linkType: hard
-
-"style-loader@npm:0.23.1":
-  version: 0.23.1
-  resolution: "style-loader@npm:0.23.1"
-  dependencies:
-    loader-utils: ^1.1.0
-    schema-utils: ^1.0.0
-  checksum: 9d8f17677bcc9a6b0dc3f23909dcb3c9976e3e37d53768ff5ffe915a62e50c6ed347b79d4f5613670289547bbfa0e1be968ac89ecffb600553e1931c761b1167
   languageName: node
   linkType: hard
 
