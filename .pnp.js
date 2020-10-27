@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:12.1.10"],
             ["@types/faker", "npm:5.1.3"],
             ["@types/jest", "npm:26.0.15"],
-            ["@types/node", "npm:12.12.68"],
+            ["@types/node", "npm:12.19.2"],
             ["@types/react", "npm:16.9.53"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@types/react-router-dom", "npm:5.1.6"],
@@ -4675,10 +4675,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/node", [
-        ["npm:12.12.68", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-12.12.68-ab96dd6188-1cdcd3748d.zip/node_modules/@types/node/",
+        ["npm:12.19.2", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-12.19.2-533ad90864-6371da7492.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:12.12.68"]
+            ["@types/node", "npm:12.19.2"]
           ],
           "linkType": "HARD",
         }],
@@ -14584,7 +14584,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:12.1.10"],
             ["@types/faker", "npm:5.1.3"],
             ["@types/jest", "npm:26.0.15"],
-            ["@types/node", "npm:12.12.68"],
+            ["@types/node", "npm:12.19.2"],
             ["@types/react", "npm:16.9.53"],
             ["@types/react-dom", "npm:16.9.8"],
             ["@types/react-router-dom", "npm:5.1.6"],
