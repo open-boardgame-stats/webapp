@@ -19,9 +19,6 @@ import { hitler } from "../components/Game";
 import GameCard from "../components/Game/Card";
 
 const useStyles = makeStyles({
-  root: {
-    padding: theme.spacing(3),
-  },
   search: {
     marginRight: theme.spacing(3),
   },
@@ -36,50 +33,48 @@ const Games = () => {
   const games = [hitler];
   return (
     <Layout>
-      <div className={classes.root}>
-        <Box display="flex" justifyContent="space-between" flexDirection="row">
-          <Typography variant="h4">Games:</Typography>
-          <Box>
-            <TextField
-              className={classes.search}
-              placeholder="Search"
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-              }}
-            />
-            <Button
-              variant="contained"
-              color="primary"
-              endIcon={<GroupAddIcon />}
-              component={Link}
-              to="/game/create"
-            >
-              Create a game
-            </Button>
-          </Box>
+      <Box display="flex" justifyContent="space-between" flexDirection="row">
+        <Typography variant="h4">Games:</Typography>
+        <Box>
+          <TextField
+            className={classes.search}
+            placeholder="Search"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            endIcon={<GroupAddIcon />}
+            component={Link}
+            to="/game/create"
+          >
+            Create a game
+          </Button>
         </Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          flex="1"
-          flexWrap="wrap"
-          mt={2}
-          mb={2}
-        >
-          <Grid container>
-            {games.map((g, i) => (
-              <Grid item key={i} lg={3} md={4} xs={12} className={classes.grid}>
-                <GameCard game={g} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-        <Pagination page={1} count={10} />
-      </div>
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="row"
+        flex="1"
+        flexWrap="wrap"
+        mt={2}
+        mb={2}
+      >
+        <Grid container>
+          {games.map((g, i) => (
+            <Grid item key={i} lg={3} md={4} xs={12} className={classes.grid}>
+              <GameCard game={g} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      <Pagination page={1} count={10} />
     </Layout>
   );
 };

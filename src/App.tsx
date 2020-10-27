@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Games from "./pages/Games";
 import theme from "./theme";
 import Profile from "./pages/Profile";
+import SecretHitler from "./pages/games/secret-hitler";
+import CreateSecretHitlerMatch from "./pages/games/secret-hitler/Create";
 
 function App() {
   return (
@@ -17,8 +19,14 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/games">
+          <Route path="/games" exact>
             <Games />
+          </Route>
+          <Route path="/games/secret_hitler" exact>
+            <SecretHitler />
+          </Route>
+          <Route path="/games/secret_hitler/create">
+            <CreateSecretHitlerMatch />
           </Route>
           <Route path="/profile">
             <Profile />

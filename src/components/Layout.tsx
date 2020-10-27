@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   AppBar,
+  Box,
   Drawer,
   IconButton,
   Link,
@@ -115,8 +116,9 @@ const Layout: React.FC = ({ children }) => {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {/* wtf https://github.com/DefinitelyTyped/DefinitelyTyped/issues/18051 */}
-        <>{children}</>
+        <Box pr={3} pl={3} pt={2}>
+          {children}
+        </Box>
       </main>
     </div>
   );
