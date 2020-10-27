@@ -59,6 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:8.1.0"],
             ["babel-plugin-named-asset-import", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:0.3.6"],
             ["babel-preset-react-app", "npm:9.1.2"],
+            ["bfj", "npm:7.0.2"],
             ["camelcase", "npm:5.3.1"],
             ["case-sensitive-paths-webpack-plugin", "npm:2.3.0"],
             ["eslint", "npm:6.8.0"],
@@ -4598,6 +4599,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["bfj", [
+        ["npm:7.0.2", {
+          "packageLocation": "./.yarn/cache/bfj-npm-7.0.2-a958403530-0292cbdafc.zip/node_modules/bfj/",
+          "packageDependencies": [
+            ["bfj", "npm:7.0.2"],
+            ["bluebird", "npm:3.7.2"],
+            ["check-types", "npm:11.1.2"],
+            ["hoopy", "npm:0.1.4"],
+            ["tryer", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["big.js", [
         ["npm:5.2.2", {
           "packageLocation": "./.yarn/cache/big.js-npm-5.2.2-e147c30820-ea33d7d256.zip/node_modules/big.js/",
@@ -5201,6 +5215,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/chardet-npm-0.7.0-27933dd6c7-b71a4ee464.zip/node_modules/chardet/",
           "packageDependencies": [
             ["chardet", "npm:0.7.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["check-types", [
+        ["npm:11.1.2", {
+          "packageLocation": "./.yarn/cache/check-types-npm-11.1.2-67e85ffacd-e756b5a813.zip/node_modules/check-types/",
+          "packageDependencies": [
+            ["check-types", "npm:11.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -8730,6 +8753,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["hoist-non-react-statics", "npm:3.3.2"],
             ["react-is", "npm:16.13.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["hoopy", [
+        ["npm:0.1.4", {
+          "packageLocation": "./.yarn/cache/hoopy-npm-0.1.4-32e7a5b08e-29b8c7e502.zip/node_modules/hoopy/",
+          "packageDependencies": [
+            ["hoopy", "npm:0.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -12907,6 +12939,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-loader", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:8.1.0"],
             ["babel-plugin-named-asset-import", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:0.3.6"],
             ["babel-preset-react-app", "npm:9.1.2"],
+            ["bfj", "npm:7.0.2"],
             ["camelcase", "npm:5.3.1"],
             ["case-sensitive-paths-webpack-plugin", "npm:2.3.0"],
             ["eslint", "npm:6.8.0"],
@@ -15844,6 +15877,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/treeify-npm-1.1.0-abf9292333-78db62f564.zip/node_modules/treeify/",
           "packageDependencies": [
             ["treeify", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tryer", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/tryer-npm-1.0.1-f48ab9ec32-0d0fa95e8a.zip/node_modules/tryer/",
+          "packageDependencies": [
+            ["tryer", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
