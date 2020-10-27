@@ -7,10 +7,6 @@ import Layout from "../../../components/Layout";
 import MatchList from "../../../components/Match/List";
 import Match from "../../../types/Match";
 
-interface Props {
-  gameId: string;
-}
-
 const SecretHilter = () => {
   const matches: Match[] = Array(20)
     .fill(1)

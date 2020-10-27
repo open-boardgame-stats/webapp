@@ -38,7 +38,7 @@ const useStyles = makeStyles({
   },
 });
 
-const MatchList = ({ matches, game }: Props) => {
+const MatchList: React.FC<Props> = ({ matches, game }) => {
   const classes = useStyles();
   const history = useHistory();
   const [page, setPage] = useState(0);

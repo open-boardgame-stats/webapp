@@ -34,7 +34,7 @@ interface Props {
   game: Game;
 }
 
-const GameCard = ({ game }: Props) => {
+const GameCard: React.FC<Props> = ({ game }) => {
   const classes = useStyles();
 
   return (
