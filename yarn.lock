@@ -2603,7 +2603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:^5.9.1":
+"@types/testing-library__jest-dom@npm:^5.9.1, @types/testing-library__jest-dom@npm:^5.9.5":
   version: 5.9.5
   resolution: "@types/testing-library__jest-dom@npm:5.9.5"
   dependencies:
@@ -10985,6 +10985,7 @@ fsevents@^1.2.7:
     "@types/react-dom": ^16.9.8
     "@types/react-router-dom": ^5.1.6
     "@types/recharts": ^1.8.16
+    "@types/testing-library__jest-dom": ^5.9.5
     "@typescript-eslint/eslint-plugin": ^4.6.0
     "@typescript-eslint/parser": ^4.6.0
     "@yarnpkg/pnpify": ^2.3.3
