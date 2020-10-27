@@ -46,6 +46,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "eslint-webpack-plugin": "^2.1.0",
     "faker": "^5.1.0",
     "file-loader": "4.3.0",
     "fs-extra": "^9.0.1",
