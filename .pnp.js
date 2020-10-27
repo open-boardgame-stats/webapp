@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.11.5"],
             ["@testing-library/react", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:11.1.0"],
             ["@testing-library/user-event", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:12.1.10"],
-            ["@types/faker", "npm:5.1.2"],
+            ["@types/faker", "npm:5.1.3"],
             ["@types/jest", "npm:26.0.15"],
             ["@types/node", "npm:12.12.68"],
             ["@types/react", "npm:16.9.53"],
@@ -2896,10 +2896,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/faker", [
-        ["npm:5.1.2", {
-          "packageLocation": "./.yarn/cache/@types-faker-npm-5.1.2-8422d02be5-3a7b0191b7.zip/node_modules/@types/faker/",
+        ["npm:5.1.3", {
+          "packageLocation": "./.yarn/cache/@types-faker-npm-5.1.3-9357c74092-8af11ad8e5.zip/node_modules/@types/faker/",
           "packageDependencies": [
-            ["@types/faker", "npm:5.1.2"]
+            ["@types/faker", "npm:5.1.3"]
           ],
           "linkType": "HARD",
         }]
@@ -12863,7 +12863,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/jest-dom", "npm:5.11.5"],
             ["@testing-library/react", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:11.1.0"],
             ["@testing-library/user-event", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:12.1.10"],
-            ["@types/faker", "npm:5.1.2"],
+            ["@types/faker", "npm:5.1.3"],
             ["@types/jest", "npm:26.0.15"],
             ["@types/node", "npm:12.12.68"],
             ["@types/react", "npm:16.9.53"],
