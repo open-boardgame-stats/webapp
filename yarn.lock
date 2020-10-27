@@ -6269,7 +6269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.12.0":
+"eslint@npm:^7.12.1":
   version: 7.12.1
   resolution: "eslint@npm:7.12.1"
   dependencies:
@@ -10385,7 +10385,7 @@ fsevents@~2.1.2:
     camelcase: ^6.1.0
     case-sensitive-paths-webpack-plugin: 2.3.0
     clsx: ^1.1.1
-    eslint: ^7.12.0
+    eslint: ^7.12.1
     eslint-config-react-app: ^6.0.0
     eslint-plugin-flowtype: ^5.2.0
     eslint-plugin-import: ^2.22.1
