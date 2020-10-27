@@ -1,5 +1,6 @@
 extends:
   - "react-app"
+  - "react-app/jest"
 rules:
   react/self-closing-comp:
     - error

@@ -9,6 +9,7 @@ const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 const paths = require("./paths");
 const ModuleNotFoundPlugin = require("react-dev-utils/ModuleNotFoundPlugin");
 const ForkTsCheckerWebpackPlugin = require("react-dev-utils/ForkTsCheckerWebpackPlugin");
@@ -209,25 +210,6 @@ module.exports = function (webpackEnv) {
       rules: [
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
-
-        // First, run the linter.
-        // It's important to do this before Babel processes the JS.
-        {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
-          enforce: "pre",
-          use: [
-            {
-              options: {
-                cache: true,
-                formatter: require.resolve("react-dev-utils/eslintFormatter"),
-                eslintPath: require.resolve("eslint"),
-                resolvePluginsRelativeTo: __dirname,
-              },
-              loader: require.resolve("eslint-loader"),
-            },
-          ],
-          include: paths.appSrc,
-        },
         {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
@@ -420,6 +402,20 @@ module.exports = function (webpackEnv) {
         silent: true,
         // The formatter is invoked directly in WebpackDevServerUtils during development
         formatter: isEnvProduction ? typescriptFormatter : undefined,
+      }),
+      new ESLintPlugin({
+        // Plugin options
+        extensions: ["js", "mjs", "jsx", "ts", "tsx"],
+        formatter: require.resolve("react-dev-utils/eslintFormatter"),
+        eslintPath: require.resolve("eslint"),
+        context: paths.appSrc,
+        // ESLint class options
+        cwd: paths.appPath,
+        resolvePluginsRelativeTo: __dirname,
+        baseConfig: {
+          extends: [require.resolve("eslint-config-react-app/base")],
+          rules: {},
+        },
       }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
