@@ -35,7 +35,7 @@ interface Props {
   community: Community;
 }
 
-const CommunityCard = ({ community }: Props) => {
+const CommunityCard: React.FC<Props> = ({ community }) => {
   const classes = useStyles();
 
   return (
