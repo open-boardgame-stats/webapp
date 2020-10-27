@@ -86,7 +86,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["prettier", "npm:2.1.2"],
             ["react", "npm:16.14.0"],
-            ["react-app-polyfill", "npm:1.0.6"],
+            ["react-app-polyfill", "npm:2.0.0"],
             ["react-dev-utils", "npm:11.0.0"],
             ["react-dom", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:16.14.0"],
             ["react-refresh", "npm:0.9.0"],
@@ -14623,7 +14623,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pnp-webpack-plugin", "npm:1.6.4"],
             ["prettier", "npm:2.1.2"],
             ["react", "npm:16.14.0"],
-            ["react-app-polyfill", "npm:1.0.6"],
+            ["react-app-polyfill", "npm:2.0.0"],
             ["react-dev-utils", "npm:11.0.0"],
             ["react-dom", "virtual:a835a149356c54372c5995e9cef452a23b40a0c3ad7302e5a074dd20ffa55870c28cabaeb0a28dc99b2bb347f8fbfdbf224780ac1d2d649e66be5bed47c81f42#npm:16.14.0"],
             ["react-refresh", "npm:0.9.0"],
@@ -15100,10 +15100,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["react-app-polyfill", [
-        ["npm:1.0.6", {
-          "packageLocation": "./.yarn/cache/react-app-polyfill-npm-1.0.6-5783bc24de-94d24bf1d6.zip/node_modules/react-app-polyfill/",
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/react-app-polyfill-npm-2.0.0-6c706ec28e-96b8bb3bde.zip/node_modules/react-app-polyfill/",
           "packageDependencies": [
-            ["react-app-polyfill", "npm:1.0.6"],
+            ["react-app-polyfill", "npm:2.0.0"],
             ["core-js", "npm:3.6.5"],
             ["object-assign", "npm:4.1.1"],
             ["promise", "npm:8.1.0"],
