@@ -5219,7 +5219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase@npm:^6.0.0":
+"camelcase@npm:^6.0.0, camelcase@npm:^6.1.0":
   version: 6.1.0
   resolution: "camelcase@npm:6.1.0"
   checksum: 3e968d5efba3c08410437c097b6706aa2a3f1ff34c3ee11940cca932397d99e44693a314545e2d00cb36c1c05d8463ca6f3dabb005e9ce2b615edb7ef274b6c3
@@ -12132,7 +12132,7 @@ fsevents@^1.2.7:
     babel-plugin-named-asset-import: ^0.3.6
     babel-preset-react-app: ^9.1.2
     bfj: ^7.0.2
-    camelcase: ^5.3.1
+    camelcase: ^6.1.0
     case-sensitive-paths-webpack-plugin: 2.3.0
     eslint: ^7.11.0
     eslint-config-react-app: ^6.0.0
