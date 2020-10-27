@@ -3907,12 +3907,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-named-asset-import@npm:^0.3.6":
-  version: 0.3.6
-  resolution: "babel-plugin-named-asset-import@npm:0.3.6"
+"babel-plugin-named-asset-import@npm:^0.3.7":
+  version: 0.3.7
+  resolution: "babel-plugin-named-asset-import@npm:0.3.7"
   peerDependencies:
     "@babel/core": ^7.1.0
-  checksum: 5bd4847018a2c9eb94c6ee96d91a5b6635715312920b062d852094a54bb1bcc464dccc335bd3138a5cc2599bc1d1cb8c0660d147158505ab47ffd4c2247281f7
+  checksum: cc09e3679a50a6f4e86d7238a087625a3037663abf278cf0c9233932f8995ab960736dfee4c7427c45df68643391a38f6f193cf0e8f1a445573246927f05a4ef
   languageName: node
   linkType: hard
 
@@ -11378,7 +11378,7 @@ fsevents@^1.2.7:
     babel-eslint: 10.1.0
     babel-jest: ^26.6.1
     babel-loader: 8.1.0
-    babel-plugin-named-asset-import: ^0.3.6
+    babel-plugin-named-asset-import: ^0.3.7
     babel-preset-react-app: ^10.0.0
     bfj: ^7.0.2
     camelcase: ^6.1.0
