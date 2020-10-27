@@ -11209,7 +11209,7 @@ fsevents@^2.1.2:
     react-router-dom: ^5.2.0
     recharts: ^1.8.5
     terser-webpack-plugin: 2.3.8
-    ts-pnp: 1.1.6
+    ts-pnp: 1.2.0
     typescript: ^4.0.5
     url-loader: 2.3.0
     webpack: 4.42.0
@@ -13781,7 +13781,17 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"ts-pnp@npm:1.1.6, ts-pnp@npm:^1.1.6":
+"ts-pnp@npm:1.2.0":
+  version: 1.2.0
+  resolution: "ts-pnp@npm:1.2.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 78341a27939de565e2754ff65ebb689743c16e3295528089d143c08d91842cf9029c3d6b3c95a9a20854a114a7904329d02c710d63f7ce4dbf671b8a3e560ac1
+  languageName: node
+  linkType: hard
+
+"ts-pnp@npm:^1.1.6":
   version: 1.1.6
   resolution: "ts-pnp@npm:1.1.6"
   peerDependenciesMeta:
