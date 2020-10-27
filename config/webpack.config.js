@@ -14,11 +14,20 @@ const paths = require("./paths");
 const ModuleNotFoundPlugin = require("react-dev-utils/ModuleNotFoundPlugin");
 const ForkTsCheckerWebpackPlugin = require("react-dev-utils/ForkTsCheckerWebpackPlugin");
 const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const appPackageJson = require(paths.appPackageJson);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
+
+const webpackDevClientEntry = require.resolve(
+  "react-dev-utils/webpackHotDevClient"
+);
+const reactRefreshOverlayEntry = require.resolve(
+  "react-dev-utils/refreshOverlayInterop"
+);
+
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== "false";
@@ -49,25 +58,7 @@ module.exports = function (webpackEnv) {
       : isEnvDevelopment && "cheap-module-source-map",
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
-    entry: [
-      // Include an alternative client for WebpackDevServer. A client's job is to
-      // connect to WebpackDevServer by a socket and get notified about changes.
-      // When you save a file, the client will either apply hot updates (in case
-      // of CSS changes), or refresh the page (in case of JS changes). When you
-      // make a syntax error, this client will display a syntax error overlay.
-      // Note: instead of the default WebpackDevServer client, we use a custom one
-      // to bring better experience for Create React App users. You can replace
-      // the line below with these two lines if you prefer the stock client:
-      // require.resolve('webpack-dev-server/client') + '?/',
-      // require.resolve('webpack/hot/dev-server'),
-      isEnvDevelopment &&
-        require.resolve("react-dev-utils/webpackHotDevClient"),
-      // Finally, this is your app's code:
-      paths.appIndexJs,
-      // We include the app code last so that if there is a runtime error during
-      // initialization, it doesn't blow up the WebpackDevServer client, and
-      // changing JS code would still trigger a refresh.
-    ].filter(Boolean),
+    entry: paths.appIndexJs,
     output: {
       // The build folder.
       path: isEnvProduction ? paths.appBuild : undefined,
@@ -249,7 +240,8 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
-                ],
+                  isEnvDevelopment && require.resolve("react-refresh/babel"),
+                ].filter(Boolean),
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
                 // directory for faster rebuilds.
@@ -344,8 +336,22 @@ module.exports = function (webpackEnv) {
       // This gives some necessary context to module not found errors, such as
       // the requesting resource.
       new ModuleNotFoundPlugin(paths.appPath),
-      // This is necessary to emit hot updates (currently CSS only):
+      // This is necessary to emit hot updates (CSS and Fast Refresh):
       isEnvDevelopment && new webpack.HotModuleReplacementPlugin(),
+      // Experimental hot reloading for React .
+      // https://github.com/facebook/react/tree/master/packages/react-refresh
+      isEnvDevelopment &&
+        new ReactRefreshWebpackPlugin({
+          overlay: {
+            entry: webpackDevClientEntry,
+            // The expected exports are slightly different from what the overlay exports,
+            // so an interop is included here to enable feedback on module-level errors.
+            module: reactRefreshOverlayEntry,
+            // Since we ship a custom dev client and overlay integration,
+            // the bundled socket handling logic can be eliminated.
+            sockIntegration: false,
+          },
+        }),
       // Watcher doesn't work well if you mistype casing in a path so we use
       // a plugin that prints an error when you attempt to do this.
       // See https://github.com/facebook/create-react-app/issues/240
