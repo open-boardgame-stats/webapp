@@ -14,9 +14,9 @@ import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import { Link } from "react-router-dom";
 
 import Layout from "../components/Layout";
+import { generateMultiple } from "../components/Community";
+import CommunityCard from "../components/Community/Card";
 import theme from "../theme";
-import { hitler } from "../components/Game";
-import GameCard from "../components/Game/Card";
 
 const useStyles = makeStyles({
   search: {
@@ -28,13 +28,13 @@ const useStyles = makeStyles({
   },
 });
 
-const Games = () => {
+const HomePage = () => {
   const classes = useStyles();
-  const games = [hitler];
+  const communities = generateMultiple(5);
   return (
     <Layout>
       <Box display="flex" justifyContent="space-between" flexDirection="row">
-        <Typography variant="h4">Games:</Typography>
+        <Typography variant="h4">Communities:</Typography>
         <Box>
           <TextField
             className={classes.search}
@@ -52,9 +52,9 @@ const Games = () => {
             color="primary"
             endIcon={<GroupAddIcon />}
             component={Link}
-            to="/game/create"
+            to="/community/create"
           >
-            Create a game
+            Create a community
           </Button>
         </Box>
       </Box>
@@ -67,9 +67,9 @@ const Games = () => {
         mb={2}
       >
         <Grid container>
-          {games.map((g, i) => (
+          {communities.map((c, i) => (
             <Grid item key={i} lg={3} md={4} xs={12} className={classes.grid}>
-              <GameCard game={g} />
+              <CommunityCard community={c} />
             </Grid>
           ))}
         </Grid>
@@ -78,5 +78,4 @@ const Games = () => {
     </Layout>
   );
 };
-
-export default Games;
+export default HomePage;
