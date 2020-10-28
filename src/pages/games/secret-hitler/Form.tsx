@@ -90,7 +90,7 @@ const SHForm = (props: SHFormProps) => {
       counters[partyMatch.fascist] >
       rolesByPlayerNum[playerNum][partyMatch.fascist]
     ) {
-      return { ruleError: "There are too many farcists" };
+      return { ruleError: "There are too many fascist" };
     }
 
     if (
