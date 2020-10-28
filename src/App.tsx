@@ -6,8 +6,11 @@ import Home from "./pages/HomePage";
 import Games from "./pages/GamesPage";
 import theme from "./theme";
 import Profile from "./pages/ProfilePage";
+
 import SecretHitler from "./pages/games/secret-hitler";
 import CreateSecretHitlerMatch from "./pages/games/secret-hitler/Create";
+import Codenames from "./pages/games/codenames";
+import CreateCodenamesMatch from "./pages/games/codenames/Create";
 
 function App() {
   return (
@@ -26,6 +29,12 @@ function App() {
           </Route>
           <Route path="/games/secret_hitler/create">
             <CreateSecretHitlerMatch />
+          </Route>
+          <Route path="/games/codenames" exact>
+            <Codenames />
+          </Route>
+          <Route path="/games/codenames/create">
+            <CreateCodenamesMatch />
           </Route>
           <Route path="/profile">
             <Profile />
