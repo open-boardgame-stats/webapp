@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Profile = () => {
+const ProfilePage = () => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -117,4 +117,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfilePage;
