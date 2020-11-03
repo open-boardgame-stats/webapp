@@ -2736,7 +2736,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:^3.10.1":
+"@typescript-eslint/experimental-utils@npm:^3.10.1, @typescript-eslint/experimental-utils@npm:^3.9.1":
   version: 3.10.1
   resolution: "@typescript-eslint/experimental-utils@npm:3.10.1"
   dependencies:
@@ -6008,6 +6008,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escape-string-regexp@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "escape-string-regexp@npm:4.0.0"
+  checksum: c747be8d5ff7873127e3e0cffe7d2206a37208077fa9c30a3c1bb4f26bebd081c8c24d5fba7a99449f9d20670bea3dc5e1b6098b0f074b099bd38766271a272f
+  languageName: node
+  linkType: hard
+
 "escodegen@npm:^1.14.1":
   version: 1.14.3
   resolution: "escodegen@npm:1.14.3"
@@ -6082,6 +6089,25 @@ __metadata:
   peerDependencies:
     eslint: ^7.1.0
   checksum: bf70a9bb38b60deb93b1ab14e2516709de912ea02d05ea531e8e1b3e5d56fa58ba893720081e36bffe498055de49868e7052a09468759592ed35ba253e0e40da
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-functional@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "eslint-plugin-functional@npm:3.1.0"
+  dependencies:
+    "@typescript-eslint/experimental-utils": ^3.9.1
+    array.prototype.flatmap: ^1.2.3
+    deepmerge: ^4.2.2
+    escape-string-regexp: ^4.0.0
+    object.fromentries: ^2.0.2
+  peerDependencies:
+    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
+    typescript: ^3.4.1 || ^4.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: c71c9b679c8f15bc2cc7dec198f5a5ed234d1c429882ff4bddd0ae35ee27b3620a0ba01619cc14229634f8be5f2e4fc91fcbb6f952ab4c483643398b3465e16f
   languageName: node
   linkType: hard
 
@@ -10388,6 +10414,7 @@ fsevents@~2.1.2:
     eslint: ^7.12.1
     eslint-config-react-app: ^6.0.0
     eslint-plugin-flowtype: ^5.2.0
+    eslint-plugin-functional: ^3.1.0
     eslint-plugin-import: ^2.22.1
     eslint-plugin-jest: ^24.1.0
     eslint-plugin-jest-dom: ^3.2.4
