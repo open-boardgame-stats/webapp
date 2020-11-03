@@ -6182,6 +6182,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-sonarjs@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "eslint-plugin-sonarjs@npm:0.5.0"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: c87c5f461e61cd471f03b03c10c5c962d5a954f124ba5602b85a05f80677e79e0c368b910f754e0595a706c4a261141e951fef3af41583e28b5f35b31a6ea094
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-testing-library@npm:^3.9.2":
   version: 3.9.2
   resolution: "eslint-plugin-testing-library@npm:3.9.2"
@@ -10394,6 +10403,7 @@ fsevents@~2.1.2:
     eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-react: ^7.21.5
     eslint-plugin-react-hooks: ^4.2.0
+    eslint-plugin-sonarjs: ^0.5.0
     eslint-plugin-testing-library: ^3.9.2
     eslint-webpack-plugin: ^2.1.0
     faker: ^5.1.0
