@@ -2,6 +2,7 @@ extends:
   - "react-app"
   - "react-app/jest"
   - "plugin:jest-dom/recommended"
+  - "plugin:sonarjs/recommended"
 rules:
   react/self-closing-comp:
     - error
@@ -9,3 +10,4 @@ rules:
       html: true
 plugins:
   - "jest-dom"
+  - "sonarjs"
