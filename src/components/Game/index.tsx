@@ -21,4 +21,14 @@ export const codenames: Game = {
   matches: faker.random.number(1000),
 };
 
-export const games: Game[] = [hitler, codenames];
+export const terraformingMars: Game = {
+  id: "terraforming_mars",
+  name: "Terraforming Mars",
+  imageUrl:
+    "https://images-na.ssl-images-amazon.com/images/I/91RdR7olLsL._AC_SL1500_.jpg",
+  description:
+    "In the 2400s, mankind begins to terraform the planet Mars. Giant corporations, sponsored by the World Government on Earth, initiate huge projects to raise the temperature, the oxygen level, and the ocean coverage until the environment is habitable. In Terraforming Mars, you play one of those corporations and work together in the terraforming process, but compete for getting victory points that are awarded not only for your contribution to the terraforming, but also for advancing human infrastructure throughout the solar system, and doing other commendable things.",
+  matches: faker.random.number(1000),
+};
+
+export const games: Game[] = [hitler, codenames, terraformingMars];
