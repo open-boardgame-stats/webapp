@@ -12,6 +12,8 @@ const MatchPage: React.FC = () => {
     params: { gameId },
   } = useRouteMatch<MatchProps>();
   switch (gameId) {
+    case terraformingMars.id:
+      return <TerraformingMarsMatch />;
     default:
       return null;
   }
