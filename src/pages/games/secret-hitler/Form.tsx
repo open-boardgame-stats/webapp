@@ -23,10 +23,9 @@ interface SHFormProps {
   initialValues: FormData;
 }
 
-function FormComponent() {
-  return <SHForm initialValues={initialValues} />;
-}
-const SHForm = (props: SHFormProps) => {
+const FormComponent = () => <SHForm initialValues={initialValues} />;
+
+const SHForm: React.FC<SHFormProps> = (props) => {
   const { initialValues } = props;
 
   async function onSubmit(values: FormData) {}
@@ -81,7 +80,7 @@ const SHForm = (props: SHFormProps) => {
     }
 
     if (counters[partyMatch.hitler] !== 1) {
-      return { ruleError: "Hitler must be only one" };
+      return { ruleError: "There are must be exactly one hitler" };
     }
 
     if (
