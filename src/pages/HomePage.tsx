@@ -28,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Home = () => {
+const HomePage = () => {
   const classes = useStyles();
   const communities = generateMultiple(5);
   return (
@@ -78,4 +78,4 @@ const Home = () => {
     </Layout>
   );
 };
-export default Home;
+export default HomePage;

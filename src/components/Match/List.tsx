@@ -91,7 +91,9 @@ const MatchList: React.FC<Props> = ({ matches, game }) => {
                   key={i}
                   hover
                   className={classes.row}
-                  onClick={() => history.push(`/matches/${match.id}`)}
+                  onClick={() =>
+                    history.push(`/games/${match.game.id}/matches/${match.id}`)
+                  }
                 >
                   <TableCell>{match.id}</TableCell>
                   <TableCell>{match.players.length}</TableCell>

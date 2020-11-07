@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import theme from "../theme";
-import { hitler } from "../components/Game";
+import { games } from "../components/Game";
 import GameCard from "../components/Game/Card";
 
 const useStyles = makeStyles({
@@ -28,9 +28,8 @@ const useStyles = makeStyles({
   },
 });
 
-const Games = () => {
+const GamesPage = () => {
   const classes = useStyles();
-  const games = [hitler];
   return (
     <Layout>
       <Box display="flex" justifyContent="space-between" flexDirection="row">
@@ -79,4 +78,4 @@ const Games = () => {
   );
 };
 
-export default Games;
+export default GamesPage;
