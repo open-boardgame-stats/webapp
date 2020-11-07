@@ -24,6 +24,10 @@ const drawerWidth = 240;
 const iconWidth = theme.spacing(7) + 1;
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexGrow: 1,
+  },
   button: {
     marginLeft: "auto",
     color: theme.palette.primary.contrastText,
@@ -72,7 +76,7 @@ const Layout: React.FC = ({ children }) => {
   const toggleDrawer = () => setOpen(!open);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className={classes.root}>
       <AppBar position="fixed" color="primary" className={classes.appbar}>
         <Toolbar>
           <IconButton onClick={toggleDrawer}>
