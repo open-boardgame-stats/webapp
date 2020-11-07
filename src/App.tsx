@@ -13,6 +13,7 @@ import Codenames from "./pages/games/codenames";
 import CreateCodenamesMatch from "./pages/games/codenames/Create";
 import TerraformingMars from "./pages/games/terraforming-mars";
 import MatchPage from "./pages/games/MatchPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="*">
+            <NotFoundPage />
           </Route>
         </Switch>
       </Router>
