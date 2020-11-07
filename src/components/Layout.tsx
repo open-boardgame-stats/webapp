@@ -23,46 +23,60 @@ const drawerWidth = 240;
 
 const iconWidth = theme.spacing(7) + 1;
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    marginLeft: "auto",
-    color: theme.palette.primary.contrastText,
-  },
-  appbar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: "nowrap",
-  },
-  drawerOpen: {
-    width: drawerWidth,
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerClose: {
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    overflowX: "hidden",
-    width: iconWidth,
-  },
-  content: {
-    flexGrow: 1,
-  },
-  toolbar: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-  },
-}));
+const ensureNumber = (input: number | string | undefined): number => {
+  if (typeof input === "number") {
+    return input;
+  }
+  throw new Error("not a number");
+};
+
+const useStyles = makeStyles((theme) => {
+  const topbarOffset =
+    ensureNumber(theme.mixins.toolbar.minHeight) + theme.spacing(1);
+  return {
+    root: {
+      display: "flex",
+      flexGrow: 1,
+    },
+    button: {
+      marginLeft: "auto",
+      color: theme.palette.primary.contrastText,
+    },
+    appbar: {
+      zIndex: theme.zIndex.drawer + 1,
+    },
+    drawer: {
+      width: drawerWidth,
+      flexShrink: 0,
+      whiteSpace: "nowrap",
+    },
+    drawerOpen: {
+      width: drawerWidth,
+      transition: theme.transitions.create("width", {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    },
+    drawerClose: {
+      transition: theme.transitions.create("width", {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      overflowX: "hidden",
+      width: iconWidth,
+    },
+    content: {
+      flexGrow: 1,
+      marginTop: topbarOffset,
+      paddingTop: -topbarOffset,
+      display: "flex",
+      alignItems: "stretch",
+    },
+    page: {
+      flexGrow: 1,
+    },
+  };
+});
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
@@ -72,7 +86,7 @@ const Layout: React.FC = ({ children }) => {
   const toggleDrawer = () => setOpen(!open);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className={classes.root}>
       <AppBar position="fixed" color="primary" className={classes.appbar}>
         <Toolbar>
           <IconButton onClick={toggleDrawer}>
@@ -115,8 +129,7 @@ const Layout: React.FC = ({ children }) => {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Box pr={3} pl={3} pt={2}>
+        <Box pr={3} pl={3} pt={2} className={classes.page}>
           {children}
         </Box>
       </main>
