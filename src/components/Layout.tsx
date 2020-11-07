@@ -23,6 +23,13 @@ const drawerWidth = 240;
 
 const iconWidth = theme.spacing(7) + 1;
 
+const ensureNumber = (input: number | string | undefined): number => {
+  if (typeof input === "number") {
+    return input;
+  }
+  throw new Error("not a number");
+};
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -57,14 +64,10 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
+    paddingTop: ensureNumber(theme.mixins.toolbar.minHeight) + 8,
   },
-  toolbar: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
+  page: {
+    minHeight: "100%",
   },
 }));
 
@@ -119,8 +122,7 @@ const Layout: React.FC = ({ children }) => {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Box pr={3} pl={3} pt={2}>
+        <Box pr={3} pl={3} pt={2} className={classes.page}>
           {children}
         </Box>
       </main>
