@@ -11,6 +11,8 @@ import SecretHitler from "./pages/games/secret-hitler";
 import CreateSecretHitlerMatch from "./pages/games/secret-hitler/Create";
 import Codenames from "./pages/games/codenames";
 import CreateCodenamesMatch from "./pages/games/codenames/Create";
+import TerraformingMars from "./pages/games/terraforming-mars";
+import MatchPage from "./pages/games/MatchPage";
 
 function App() {
   return (
@@ -35,6 +37,12 @@ function App() {
           </Route>
           <Route path="/games/codenames/create">
             <CreateCodenamesMatch />
+          </Route>
+          <Route path="/games/terraforming_mars" exact>
+            <TerraformingMars />
+          </Route>
+          <Route path="/games/:gameId/matches/:id">
+            <MatchPage />
           </Route>
           <Route path="/profile">
             <Profile />
