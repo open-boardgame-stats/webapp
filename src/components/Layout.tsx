@@ -30,47 +30,51 @@ const ensureNumber = (input: number | string | undefined): number => {
   throw new Error("not a number");
 };
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexGrow: 1,
-  },
-  button: {
-    marginLeft: "auto",
-    color: theme.palette.primary.contrastText,
-  },
-  appbar: {
-    zIndex: theme.zIndex.drawer + 1,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: "nowrap",
-  },
-  drawerOpen: {
-    width: drawerWidth,
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerClose: {
-    transition: theme.transitions.create("width", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    overflowX: "hidden",
-    width: iconWidth,
-  },
-  content: {
-    flexGrow: 1,
-    marginTop: ensureNumber(theme.mixins.toolbar.minHeight) + 8,
-    paddingTop: -(ensureNumber(theme.mixins.toolbar.minHeight) + 8),
-  },
-  page: {
-    minHeight: "100%",
-  },
-}));
+const useStyles = makeStyles((theme) => {
+  const topbarOffset =
+    ensureNumber(theme.mixins.toolbar.minHeight) + theme.spacing(1);
+  return {
+    root: {
+      display: "flex",
+      flexGrow: 1,
+    },
+    button: {
+      marginLeft: "auto",
+      color: theme.palette.primary.contrastText,
+    },
+    appbar: {
+      zIndex: theme.zIndex.drawer + 1,
+    },
+    drawer: {
+      width: drawerWidth,
+      flexShrink: 0,
+      whiteSpace: "nowrap",
+    },
+    drawerOpen: {
+      width: drawerWidth,
+      transition: theme.transitions.create("width", {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    },
+    drawerClose: {
+      transition: theme.transitions.create("width", {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      overflowX: "hidden",
+      width: iconWidth,
+    },
+    content: {
+      flexGrow: 1,
+      marginTop: topbarOffset,
+      paddingTop: -topbarOffset,
+    },
+    page: {
+      minHeight: "100%",
+    },
+  };
+});
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
