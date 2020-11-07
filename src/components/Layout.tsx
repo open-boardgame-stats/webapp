@@ -69,9 +69,11 @@ const useStyles = makeStyles((theme) => {
       flexGrow: 1,
       marginTop: topbarOffset,
       paddingTop: -topbarOffset,
+      display: "flex",
+      alignItems: "stretch",
     },
     page: {
-      minHeight: "100%",
+      flexGrow: 1,
     },
   };
 });
