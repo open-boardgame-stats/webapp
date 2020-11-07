@@ -64,7 +64,8 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    paddingTop: ensureNumber(theme.mixins.toolbar.minHeight) + 8,
+    marginTop: ensureNumber(theme.mixins.toolbar.minHeight) + 8,
+    paddingTop: -(ensureNumber(theme.mixins.toolbar.minHeight) + 8),
   },
   page: {
     minHeight: "100%",
