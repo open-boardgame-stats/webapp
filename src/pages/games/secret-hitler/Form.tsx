@@ -29,12 +29,9 @@ function FormComponent() {
 const SHForm = (props: SHFormProps) => {
   const { initialValues } = props;
 
-  async function onSubmit(values: FormData) {
-    console.log(values);
-  }
+  async function onSubmit(values: FormData) {}
 
   async function validate(values: FormData) {
-    console.log("validate -> values", values);
     const playerNum = values.players.length;
     let counters = [0, 0, 0];
     const partyMatch = {
@@ -70,17 +67,18 @@ const SHForm = (props: SHFormProps) => {
         if (!player.party) {
           error.party = "required";
         }
-        playersError.players.push(error);
+
+        if (Object.keys(error).length > 0) {
+          playersError.players.push(error);
+        }
       } else {
         playersError.players.push({ name: "required", party: "required" });
       }
     });
 
-    console.log("validate -> playersError", playersError);
     if (playersError.players.length > 0) {
       return playersError;
     }
-    console.log("validate -> counters", counters);
 
     if (counters[partyMatch.hitler] !== 1) {
       return { ruleError: "Hitler must be only one" };
@@ -118,7 +116,7 @@ const SHForm = (props: SHFormProps) => {
       values.won === undefined ||
       !["liberal", "fascist"].includes(values.won)
     ) {
-      return { won: "Who won?" };
+      return { won: "choose winner party" };
     }
   }
 
@@ -132,6 +130,7 @@ const SHForm = (props: SHFormProps) => {
       }}
       render={({
         handleSubmit,
+        submitting,
         form: {
           mutators: { push, pop },
         },
@@ -150,7 +149,6 @@ const SHForm = (props: SHFormProps) => {
             )}
             <FieldArray name="players">
               {({ fields, meta }) => {
-                console.log("SHForm -> meta", meta);
                 return fields.map((name, index) => (
                   <PlayerRow
                     index={index}
@@ -188,7 +186,8 @@ const SHForm = (props: SHFormProps) => {
             <Button
               variant="contained"
               color="primary"
-              disabled={Object.keys(errors).length > 0}
+              type="submit"
+              disabled={submitting}
             >
               Save Game
             </Button>
