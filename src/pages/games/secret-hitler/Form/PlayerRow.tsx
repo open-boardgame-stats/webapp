@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, MenuItem } from "@material-ui/core";
+import { Grid, makeStyles, MenuItem } from "@material-ui/core";
 import { TextField } from "mui-rff";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
 
@@ -25,14 +25,21 @@ type Props = {
   removable: boolean;
 };
 
+const useStyles = makeStyles((theme) => ({
+  addIcon: {
+    transform: "translateY(75%)",
+  },
+}));
+
 const PlayerRow: React.FC<Props> = ({
   name,
   index,
   remove,
   removable = false,
 }) => {
+  const classes = useStyles();
   return (
-    <Box mt={2} alignItems="center" textAlign="center" display="flex">
+    <Grid>
       <TextField
         style={{ width: "auto" }}
         label={`Player #${index + 1}`}
@@ -52,8 +59,10 @@ const PlayerRow: React.FC<Props> = ({
           </MenuItem>
         ))}
       </TextField>
-      {removable && <RemoveCircleOutlineIcon onClick={remove} />}
-    </Box>
+      {removable && (
+        <RemoveCircleOutlineIcon className={classes.addIcon} onClick={remove} />
+      )}
+    </Grid>
   );
 };
 
