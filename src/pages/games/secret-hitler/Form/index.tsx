@@ -11,10 +11,7 @@ import { SHFormProps, FormData } from "./types";
 
 const initialValues = { players: [null, null, null, null, null] };
 
-const FormComponent = () => <SHForm initialValues={initialValues} />;
-
-const SHForm: React.FC<SHFormProps> = (props) => {
-  const { initialValues } = props;
+const FormComponent: React.FC<SHFormProps> = ({ initialValues = initialValues }) => {
 
   async function onSubmit(values: FormData) {}
 
