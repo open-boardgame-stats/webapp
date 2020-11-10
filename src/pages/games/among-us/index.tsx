@@ -91,6 +91,7 @@ const AmongUs = () => {
       const player = match.players.find(
         (item) => item && item.name === nickname
       );
+
       if (player) {
         const curMates = match.players.filter(
           (item) => item && item.party === player.party
@@ -110,7 +111,17 @@ const AmongUs = () => {
                   [0, 0],
                 ];
               }
+              console.log(
+                "calc -> mates[mate.name]",
+                mate.name,
+                mates[mate.name]
+              );
               setResult(mates[mate.name], mate.party, isWon);
+              console.log(
+                "calc -> mates[mate.name]",
+                mate.name,
+                mates[mate.name]
+              );
             }
           });
         }
@@ -120,7 +131,7 @@ const AmongUs = () => {
       <>
         <p>total</p>
         <ul>
-          <li>{`crewmate win/lose: ${total[0][1]} / ${total[0][1]}`}</li>
+          <li>{`crewmate win/lose: ${total[0][0]} / ${total[0][1]}`}</li>
           <li>{`imposter win/lose: ${total[1][0]} / ${total[1][1]}`}</li>
         </ul>
         {Object.keys(mates).map((key) => {
@@ -129,7 +140,7 @@ const AmongUs = () => {
             <>
               <p>{key}</p>
               <ul>
-                <li>{`crewmate win/lose: ${one[0][1]} / ${one[0][1]}`}</li>
+                <li>{`crewmate win/lose: ${one[0][0]} / ${one[0][1]}`}</li>
                 <li>{`imposter win/lose: ${one[1][0]} / ${one[1][1]}`}</li>
               </ul>
             </>
