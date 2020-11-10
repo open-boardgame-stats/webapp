@@ -9,13 +9,9 @@ import PlayerRow from "./PlayerRow";
 import validate from "./validate";
 import { SHFormProps, FormData } from "./types";
 
-const initialValues = { players: [null, null, null, null, null] };
+const initValues = { players: [null, null, null, null, null] };
 
-const FormComponent = () => <SHForm initialValues={initialValues} />;
-
-const SHForm: React.FC<SHFormProps> = (props) => {
-  const { initialValues } = props;
-
+const SHForm: React.FC<SHFormProps> = ({ initialValues = initValues }) => {
   async function onSubmit(values: FormData) {}
 
   return (
@@ -30,7 +26,7 @@ const SHForm: React.FC<SHFormProps> = (props) => {
         handleSubmit,
         submitting,
         form: {
-          mutators: { push, pop },
+          mutators: { push },
         },
         errors,
         values,
@@ -96,4 +92,4 @@ const SHForm: React.FC<SHFormProps> = (props) => {
   );
 };
 
-export default FormComponent;
+export default SHForm;
