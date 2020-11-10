@@ -9,11 +9,17 @@ import Profile from "./pages/ProfilePage";
 
 import SecretHitler from "./pages/games/secret-hitler";
 import CreateSecretHitlerMatch from "./pages/games/secret-hitler/Create";
+
 import Codenames from "./pages/games/codenames";
 import CreateCodenamesMatch from "./pages/games/codenames/Create";
+
 import TerraformingMars from "./pages/games/terraforming-mars";
-import NotFoundPage from "./pages/NotFoundPage";
 import TerraformingMarsMatch from "./pages/games/terraforming-mars/Match";
+
+import AmongUs from "./pages/games/among-us";
+import CreateAmongUsMatch from "./pages/games/among-us/Create";
+
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -44,6 +50,12 @@ function App() {
           </Route>
           <Route path="/games/terraforming_mars/matches/:id">
             <TerraformingMarsMatch />
+          </Route>
+          <Route path="/games/among_us" exact>
+            <AmongUs />
+          </Route>
+          <Route path="/games/among_us/create">
+            <CreateAmongUsMatch />
           </Route>
           <Route path="/profile">
             <Profile />

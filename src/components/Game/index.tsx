@@ -11,6 +11,16 @@ export const hitler: Game = {
   matches: faker.random.number(1000),
 };
 
+export const amongUs: Game = {
+  id: "among_us",
+  name: "Among Us",
+  imageUrl:
+    "https://cdn.cloudflare.steamstatic.com/steam/apps/945360/header.jpg",
+  description:
+    "Play with 4-10 player online or via local WiFi as you attempt to prepare your spaceship for departure, but beware as one or more random players among the Crew are Impostors bent on killing everyone! Originally created as a party game, we recommend playing with friends at a LAN party or online using voice chat. Enjoy cross-platform play between Android, iOS and PC.",
+  matches: faker.random.number(1000),
+};
+
 export const codenames: Game = {
   id: "codenames",
   name: "Codenames",
@@ -31,4 +41,4 @@ export const terraformingMars: Game = {
   matches: faker.random.number(1000),
 };
 
-export const games: Game[] = [hitler, codenames, terraformingMars];
+export const games: Game[] = [hitler, codenames, terraformingMars, amongUs];
