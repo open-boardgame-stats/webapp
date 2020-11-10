@@ -9,5 +9,5 @@ export type FormData = {
 };
 
 export interface SHFormProps {
-  initialValues: FormData;
+  initialValues?: FormData;
 }
