@@ -50,14 +50,14 @@ export default async function validate(values: FormData) {
   }
 
   if (counters[partyMatch.hitler] !== 1) {
-    return { ruleError: "There are must be exactly one hitler" };
+    return { ruleError: "There must be exactly one Hitler" };
   }
 
   if (
     counters[partyMatch.fascist] >
     rolesByPlayerNum[playerNum][partyMatch.fascist]
   ) {
-    return { ruleError: "There are too many fascist" };
+    return { ruleError: "There are too many fascists" };
   }
 
   if (
