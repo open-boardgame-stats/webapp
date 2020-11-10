@@ -92,7 +92,7 @@ const Layout: React.FC = ({ children }) => {
     <div className={classes.root}>
       <AppBar position="fixed" color="primary" className={classes.appbar}>
         <Toolbar>
-          <IconButton onClick={toggleDrawer}>
+          <IconButton data-testid="drawer-toggle-button" onClick={toggleDrawer}>
             <MenuIcon className={classes.button} />
           </IconButton>
           <Link className={classes.button} component={RouterLink} to="/profile">
@@ -103,6 +103,7 @@ const Layout: React.FC = ({ children }) => {
         </Toolbar>
       </AppBar>
       <Drawer
+        data-testid="menu-drawer"
         variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: drawerOpen,
