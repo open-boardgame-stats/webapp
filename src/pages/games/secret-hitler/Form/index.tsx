@@ -9,7 +9,7 @@ import PlayerRow from "./PlayerRow";
 import validate from "./validate";
 import { FormData } from "./types";
 
-const initialValues = { players: [null, null, null, null, null] };
+const defaultInitialValues = { players: [null, null, null, null, null] };
 
 const SHForm: React.FC = () => {
   async function onSubmit(values: FormData) {}
@@ -17,7 +17,7 @@ const SHForm: React.FC = () => {
   return (
     <Form
       onSubmit={onSubmit}
-      initialValues={initialValues}
+      initialValues={defaultInitialValues}
       validate={validate}
       mutators={{
         ...arrayMutators,
