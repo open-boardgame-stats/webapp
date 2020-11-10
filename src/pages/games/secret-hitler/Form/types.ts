@@ -7,7 +7,3 @@ export type FormData = {
   players: Array<null | Player>;
   won?: string;
 };
-
-export interface SHFormProps {
-  initialValues?: FormData;
-}

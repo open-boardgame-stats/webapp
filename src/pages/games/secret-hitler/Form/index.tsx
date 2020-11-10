@@ -7,11 +7,11 @@ import { Radios } from "mui-rff";
 
 import PlayerRow from "./PlayerRow";
 import validate from "./validate";
-import { SHFormProps, FormData } from "./types";
+import { FormData } from "./types";
 
-const initValues = { players: [null, null, null, null, null] };
+const initialValues = { players: [null, null, null, null, null] };
 
-const SHForm: React.FC<SHFormProps> = ({ initialValues = initValues }) => {
+const SHForm: React.FC = () => {
   async function onSubmit(values: FormData) {}
 
   return (
