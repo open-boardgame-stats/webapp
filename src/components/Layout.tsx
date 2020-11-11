@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AppBar,
   Box,
@@ -18,6 +18,7 @@ import clsx from "clsx";
 import { ReactComponent as BoardIcon } from "../assets/icons/board.svg";
 import theme from "../theme";
 import ListItemLink from "./ListItemLink";
+import { useSettings } from "../settings/Context";
 
 const drawerWidth = 240;
 
@@ -80,16 +81,18 @@ const useStyles = makeStyles((theme) => {
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
+  const {
+    settings: { drawerOpen },
+    update,
+  } = useSettings();
 
-  const [open, setOpen] = useState(false);
-
-  const toggleDrawer = () => setOpen(!open);
+  const toggleDrawer = () => update({ drawerOpen: !drawerOpen });
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed" color="primary" className={classes.appbar}>
         <Toolbar>
-          <IconButton onClick={toggleDrawer}>
+          <IconButton data-testid="drawer-toggle-button" onClick={toggleDrawer}>
             <MenuIcon className={classes.button} />
           </IconButton>
           <Link className={classes.button} component={RouterLink} to="/profile">
@@ -100,15 +103,16 @@ const Layout: React.FC = ({ children }) => {
         </Toolbar>
       </AppBar>
       <Drawer
+        data-testid="menu-drawer"
         variant="permanent"
         className={clsx(classes.drawer, {
-          [classes.drawerOpen]: open,
-          [classes.drawerClose]: !open,
+          [classes.drawerOpen]: drawerOpen,
+          [classes.drawerClose]: !drawerOpen,
         })}
         classes={{
           paper: clsx({
-            [classes.drawerOpen]: open,
-            [classes.drawerClose]: !open,
+            [classes.drawerOpen]: drawerOpen,
+            [classes.drawerClose]: !drawerOpen,
           }),
         }}
       >
