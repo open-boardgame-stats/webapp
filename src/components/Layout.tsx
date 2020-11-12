@@ -18,7 +18,9 @@ import clsx from "clsx";
 import { ReactComponent as BoardIcon } from "../assets/icons/board.svg";
 import theme from "../theme";
 import ListItemLink from "./ListItemLink";
-import { useSettings } from "../settings/Context";
+import db from "../adapters/indexeddb";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const drawerWidth = 240;
 
@@ -81,12 +83,26 @@ const useStyles = makeStyles((theme) => {
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
-  const {
-    settings: { drawerOpen },
-    update,
-  } = useSettings();
 
-  const toggleDrawer = () => update({ drawerOpen: !drawerOpen });
+  useEffect(() => {
+    const getDrawerOpen = async () => {
+      const open = await db.get("settings", "drawerOpen");
+
+      if (open === undefined) return;
+      // setDrawerOpen(open);
+    };
+
+    getDrawerOpen();
+  }, []);
+
+  const [drawerOpen, setDrawerOpen] = useState(
+    Boolean(db.get("settings", "drawerOpen"))
+  );
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+    db.set("settings", "drawerOpen", !drawerOpen);
+  };
 
   return (
     <div className={classes.root}>

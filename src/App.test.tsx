@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import App from "./App";
-import { Settings } from "./settings/Context";
+import db from "./adapters/indexeddb";
 
 it("Is able to navigate to Secret Hitler match creation form", () => {
   const { getByText, getAllByText } = render(<App />);
@@ -17,12 +17,8 @@ it("Is able to navigate to Secret Hitler match creation form", () => {
 });
 
 describe("App settings: drawer", () => {
-  const defaultSettings: Settings = {
-    drawerOpen: true,
-  };
-
   beforeAll(() => {
-    localStorage.setItem("settings", JSON.stringify(defaultSettings));
+    db.set("settings", "drawerOpen", true);
   });
 
   it("has the drawer open", () => {
@@ -31,17 +27,14 @@ describe("App settings: drawer", () => {
     expect(drawer.className).toMatch(/drawerOpen/);
   });
 
-  it("saves the drawer setting to localstorage", () => {
+  it("saves the drawer state to indexeddb", async () => {
     const { getByTestId } = render(<App />);
     const button = getByTestId("drawer-toggle-button");
     button.click();
     const drawer = getByTestId("menu-drawer");
     expect(drawer.className).toMatch(/drawerClose/);
 
-    const stored = localStorage.getItem("settings");
-    expect(stored).toBeTruthy();
-
-    const settings: Settings = JSON.parse(stored!);
-    expect(settings.drawerOpen).toBeFalsy();
+    const stored = await db.get("settings", "drawerOpen");
+    expect(stored).toBeFalsy();
   });
 });
