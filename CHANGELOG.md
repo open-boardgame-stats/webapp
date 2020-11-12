@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Addeed
+### Added
 
 - IndexedDB support (as a plain adapter, which can only read and write data for now)
 
