@@ -89,7 +89,7 @@ const Layout: React.FC = ({ children }) => {
       const open = await db.get("settings", "drawerOpen");
 
       if (open === undefined) return;
-      // setDrawerOpen(open);
+      setDrawerOpen(open);
     };
 
     getDrawerOpen();
