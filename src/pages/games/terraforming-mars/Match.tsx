@@ -22,7 +22,7 @@ import { useRouteMatch } from "react-router-dom";
 import theme from "../../../theme";
 import { Rating } from "@material-ui/lab";
 
-const metrics = ["rating", "achievements", "awards", "cards", "cities", "forests"];
+const metrics = ["terraform rating", "achievements", "awards", "cards", "cities", "forests"];
 
 interface ScoreByCategory {
   category: string;
