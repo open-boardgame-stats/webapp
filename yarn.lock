@@ -3847,6 +3847,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-arraybuffer-es6@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "base64-arraybuffer-es6@npm:0.6.0"
+  peerDependencies:
+    core-js-bundle: ^3.6.5
+  checksum: b18f4300b6657a1b8faae4acfb436b1be276abca0e2b120996ace0dac565aef51fb1eda53f935142dcf18d68f96dba51830b39f5fed64aa237478f3217ff88bf
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2, base64-js@npm:^1.3.1":
   version: 1.3.1
   resolution: "base64-js@npm:1.3.1"
@@ -4905,7 +4914,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^2.6.10":
+"core-js@npm:^2.5.3, core-js@npm:^2.6.10":
   version: 2.6.11
   resolution: "core-js@npm:2.6.11"
   checksum: 39ad00b46deaecf344470ef940949b58c4b15e71608a98e8ac7429cd16e485b829f9720d44a44b5f4dee966ff04a18baf5283feb8aaba2cb59ce2c25fa72b88c
@@ -5676,6 +5685,15 @@ __metadata:
   version: 2.0.2
   resolution: "domelementtype@npm:2.0.2"
   checksum: 80a6e339f77079de7d606f7032c1a060584081bc0a16f6161becf3d8e8c2ba555b4ee21843352cde4db9182adf336445324db5143f2e69b1e5b1883b9c548b58
+  languageName: node
+  linkType: hard
+
+"domexception@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "domexception@npm:1.0.1"
+  dependencies:
+    webidl-conversions: ^4.0.2
+  checksum: 0a678e600248b8a6f0149cb6a6ddae77d698d16a6fcf39d4228b933d5ac2b9ee657a36b2cd08ea82ec6196da756535bd30b8362f697cc9e564d969e52437fcd8
   languageName: node
   linkType: hard
 
@@ -6554,6 +6572,16 @@ __metadata:
   version: 1.3.0
   resolution: "extsprintf@npm:1.3.0"
   checksum: 892efd56aa9b27cbfbca42ad0c59308633f66000e71d1fb19c6989ea7309b32f3ff281778871bd2ce9bc7f3ad02515aa2783cea0323d0f6ff840b7c6a6a4603e
+  languageName: node
+  linkType: hard
+
+"fake-indexeddb@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "fake-indexeddb@npm:3.1.2"
+  dependencies:
+    realistic-structured-clone: ^2.0.1
+    setimmediate: ^1.0.5
+  checksum: 3a7a64b20b6ee41717db27d2e78735abbc1e2fc8d82c262b386cb8f8bfaf49076d36de73f969dc172da84bf6401bb3f0a018543817bcdf484b48898c8fa54bf9
   languageName: node
   linkType: hard
 
@@ -7641,6 +7669,13 @@ fsevents@^1.2.7:
   dependencies:
     safer-buffer: ">= 2.1.2 < 3"
   checksum: a9b9521066ee81853a8561e92bd7240bc5d3b7d5ef7da807a475e7858b0246e318b6af518c30a20a8749ef5eafeaa9631079446e4e696c7b60f468b34dc2cbfc
+  languageName: node
+  linkType: hard
+
+"idb@npm:^5.0.7":
+  version: 5.0.7
+  resolution: "idb@npm:5.0.7"
+  checksum: a6d9adb44cf220d187c56d39398e08bbc08f978df038537a14fa2acfdfc3fffc986dcfbbcc320b2f6b47c38acdcaabf1f79f0d5e3eb5c883821f18ac7ce15093
   languageName: node
   linkType: hard
 
@@ -10298,12 +10333,14 @@ fsevents@^1.2.7:
     eslint-plugin-react-hooks: ^4.2.0
     eslint-plugin-testing-library: ^3.10.0
     eslint-webpack-plugin: ^2.2.1
+    fake-indexeddb: ^3.1.2
     faker: ^5.1.0
     file-loader: 6.2.0
     final-form: ^4.20.1
     final-form-arrays: ^3.0.2
     fs-extra: ^9.0.1
     html-webpack-plugin: 4.5.0
+    idb: ^5.0.7
     identity-obj-proxy: 3.0.0
     jest: 26.6.3
     jest-circus: 26.6.3
@@ -11675,6 +11712,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"realistic-structured-clone@npm:^2.0.1":
+  version: 2.0.2
+  resolution: "realistic-structured-clone@npm:2.0.2"
+  dependencies:
+    core-js: ^2.5.3
+    domexception: ^1.0.1
+    typeson: ^5.8.2
+    typeson-registry: ^1.0.0-alpha.20
+  checksum: 03a5ffad08baad29cf0735dad3c464c6d974e41cda3cf0f5b2b52101ea9809fd335b6ea2d2b8b43daea37a6d72b5b6250d122eeffd7f02eac917fe66d13426b1
+  languageName: node
+  linkType: hard
+
 "recharts-scale@npm:^0.4.2":
   version: 0.4.3
   resolution: "recharts-scale@npm:0.4.3"
@@ -12422,7 +12471,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"setimmediate@npm:^1.0.4":
+"setimmediate@npm:^1.0.4, setimmediate@npm:^1.0.5":
   version: 1.0.5
   resolution: "setimmediate@npm:1.0.5"
   checksum: 87884d8add4779fe47ccf763396a5bf875640ae34d80a10802da4de5c25d87647c12f6e7748fd5b8c143b57201caf2a5a781631456c228825f166ca305c12f20
@@ -13636,6 +13685,27 @@ typescript@^4.0.5:
   languageName: node
   linkType: hard
 
+"typeson-registry@npm:^1.0.0-alpha.20":
+  version: 1.0.0-alpha.38
+  resolution: "typeson-registry@npm:1.0.0-alpha.38"
+  dependencies:
+    base64-arraybuffer-es6: ^0.6.0
+    typeson: ^5.18.2
+    whatwg-url: ^8.1.0
+  checksum: 12794981b9d2e274d4577a2b4c4105bf4b6cbff58f9795a140429708ca20656a33bd9b75bc82402b06891a3dd87d2f130da38940be2c099c41547df45d46711e
+  languageName: node
+  linkType: hard
+
+"typeson@npm:^5.18.2, typeson@npm:^5.8.2":
+  version: 5.18.2
+  resolution: "typeson@npm:5.18.2"
+  peerDependencies:
+    core-js-bundle: ^3.6.4
+    regenerator-runtime: ^0.13.3
+  checksum: 6d009aa83e7f7c7733b6e100d529d70041011daa8c0f3d1e546b1f6fbd7e8203d192afb3986dad9f0202cc72f6e3fd65fb84a2df2fb976841577f4d5bf83c3bf
+  languageName: node
+  linkType: hard
+
 "underscore@npm:^1.7.0":
   version: 1.11.0
   resolution: "underscore@npm:1.11.0"
@@ -13998,6 +14068,13 @@ typescript@^4.0.5:
   languageName: node
   linkType: hard
 
+"webidl-conversions@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "webidl-conversions@npm:4.0.2"
+  checksum: 75c2ada4262cda41410ec898178f4f2a31419a905415a98a0bd1b93441ce4a2b942bae2d0ac6d637b749b9d3b309be5a49dbc3b06aae9d9e65280554268a2c94
+  languageName: node
+  linkType: hard
+
 "webidl-conversions@npm:^5.0.0":
   version: 5.0.0
   resolution: "webidl-conversions@npm:5.0.0"
@@ -14186,7 +14263,7 @@ typescript@^4.0.5:
   languageName: node
   linkType: hard
 
-"whatwg-url@npm:^8.0.0":
+"whatwg-url@npm:^8.0.0, whatwg-url@npm:^8.1.0":
   version: 8.4.0
   resolution: "whatwg-url@npm:8.4.0"
   dependencies:

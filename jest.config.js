@@ -2,7 +2,7 @@ module.exports = {
   resolver: require.resolve(`jest-pnp-resolver`),
   roots: ["<rootDir>/src"],
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
-  setupFiles: ["react-app-polyfill/jsdom"],
+  setupFiles: ["react-app-polyfill/jsdom", "fake-indexeddb/auto"],
   setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
   testRunner: "jest-circus/runner",
   testMatch: [
