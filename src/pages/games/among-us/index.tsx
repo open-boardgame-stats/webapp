@@ -89,7 +89,7 @@ const AmongUs = () => {
 
     store.forEach((match: AmongUsMatch<FormData>) => {
       const player = match.players.find(
-        (item) => item && item.name === nickname
+        (item) => item && item.name.toLowerCase() === nickname.toLowerCase()
       );
 
       if (player) {
@@ -103,25 +103,16 @@ const AmongUs = () => {
           setResult(total, player.party, isWon);
 
           curMates.forEach((mate) => {
-            if (mate.name === player.name) return;
+            const name = mate.name.toLowerCase();
+            if (name === player.name.toLowerCase()) return;
             if (mate.party === player.party) {
-              if (!mates[mate.name]) {
-                mates[mate.name] = [
+              if (!mates[name]) {
+                mates[name] = [
                   [0, 0],
                   [0, 0],
                 ];
               }
-              console.log(
-                "calc -> mates[mate.name]",
-                mate.name,
-                mates[mate.name]
-              );
-              setResult(mates[mate.name], mate.party, isWon);
-              console.log(
-                "calc -> mates[mate.name]",
-                mate.name,
-                mates[mate.name]
-              );
+              setResult(mates[name], mate.party, isWon);
             }
           });
         }
@@ -137,13 +128,9 @@ const AmongUs = () => {
         {Object.keys(mates).map((key) => {
           const one = mates[key];
           return (
-            <>
-              <p>{key}</p>
-              <ul>
-                <li>{`crewmate win/lose: ${one[0][0]} / ${one[0][1]}`}</li>
-                <li>{`imposter win/lose: ${one[1][0]} / ${one[1][1]}`}</li>
-              </ul>
-            </>
+            <p>
+              {`${key} crewmate (${one[0][0]} / ${one[0][1]}) imposter (${one[1][0]} / ${one[1][1]})`}
+            </p>
           );
         })}
       </>

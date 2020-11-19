@@ -56,6 +56,7 @@ const PlayerRow: React.FC<Props> = ({
     <Grid style={{ display: "flex", flexDirection: "row" }}>
       <Autocomplete
         id="combo-box-demo"
+        freeSolo
         style={{ width: "auto", minWidth: "150px" }}
         options={players}
         getOptionLabel={(option) => option}

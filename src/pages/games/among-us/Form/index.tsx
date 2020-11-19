@@ -5,6 +5,7 @@ import { FieldArray } from "react-final-form-arrays";
 import arrayMutators from "final-form-arrays";
 import { Radios, TextField } from "mui-rff";
 import faker from "faker";
+import { useHistory } from "react-router-dom";
 
 import PlayerRow from "./PlayerRow";
 import validate from "./validate";
@@ -44,12 +45,15 @@ const maps = [
 ];
 
 const AmongUsForm: React.FC = () => {
+  let history = useHistory();
+
   async function onSubmit(values: Match<FormData>) {
     saveNewMatch({
       ...values,
       id: faker.random.uuid(),
       createdAt: new Date(),
     });
+    history.push("/games/among_us");
   }
 
   return (
