@@ -23,7 +23,7 @@ interface Props {
 const MatchView: React.FC<Props> = ({ match }) => {
   const [order, setOrder] = useState<Order>("desc");
   const [orderBy, setOrderBy] = useState(
-    match?.game.statDescriptions[0].id || ""
+    match?.gameVersion.statDescriptions[0].id || ""
   );
 
   const sortedStats = useMemo(() => {
@@ -40,7 +40,7 @@ const MatchView: React.FC<Props> = ({ match }) => {
       };
     }, {} as Record<string, Record<string, string>>);
     return Object.entries(statsByPlayer || {}).sort((a, b) => {
-      const statType = match?.game.statDescriptions.find(
+      const statType = match?.gameVersion.statDescriptions.find(
         (s) => s.id === orderBy
       )?.type;
 
@@ -80,7 +80,7 @@ const MatchView: React.FC<Props> = ({ match }) => {
         <TableHead>
           <TableRow>
             <TableCell>Player</TableCell>
-            {match.game.statDescriptions.map((stat) => (
+            {match.gameVersion.statDescriptions.map((stat) => (
               <TableCell key={stat.id}>
                 <TableSortLabel
                   active={orderBy === stat.id}
@@ -101,7 +101,7 @@ const MatchView: React.FC<Props> = ({ match }) => {
               return (
                 <TableRow key={playerId}>
                   <TableCell>{player?.name || player?.owner?.name}</TableCell>
-                  {match.game.statDescriptions.map((stat) => (
+                  {match.gameVersion.statDescriptions.map((stat) => (
                     <TableCell key={stat.id}>{stats[stat.id]}</TableCell>
                   ))}
                 </TableRow>
