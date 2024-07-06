@@ -1,119 +1,27 @@
-import {
-  Container,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  TableSortLabel,
-} from "@mui/material";
-import React, { useCallback, useMemo, useState } from "react";
+"use client";
 
-import {
-  MatchFieldsFragment,
-  StatDescriptionStatType,
-} from "graphql/generated";
-import { Title } from "modules/nav";
-import { byOrderNumber } from "modules/stats/utils";
+import { Divider, Stack, Typography } from "@mui/material";
+import React from "react";
 
-type Order = "asc" | "desc";
+import MatchPlayerPerformanceComparisonRadarChart from "@/matches/components/MatchPlayerPerformanceComparisonRadarChart";
+import MatchScoreDistributionBarChart from "@/matches/components/MatchScoreDistributionBarChart";
+import MatchTable from "@/matches/components/MatchTable";
+import { MatchFieldsFragment } from "graphql/generated";
 
 interface Props {
   match: MatchFieldsFragment;
 }
 
 const MatchView: React.FC<Props> = ({ match }) => {
-  const [order, setOrder] = useState<Order>("desc");
-  const statDescriptions = useMemo(
-    () => match.gameVersion.statDescriptions.slice().sort(byOrderNumber),
-    [match.gameVersion.statDescriptions]
-  );
-  const [orderBy, setOrderBy] = useState(statDescriptions[0].id || "");
-
-  const sortedStats = useMemo(() => {
-    const statsByPlayer = match?.stats?.reduce((acc, stat) => {
-      if (!stat.player) {
-        return acc;
-      }
-      return {
-        ...acc,
-        [stat.player.id]: {
-          ...(acc[stat.player.id] || {}),
-          [stat.statDescription.id]: stat.value,
-        },
-      };
-    }, {} as Record<string, Record<string, string>>);
-    return Object.entries(statsByPlayer || {}).sort((a, b) => {
-      const statType = statDescriptions.find((s) => s.id === orderBy)?.type;
-
-      const aStat =
-        statType === StatDescriptionStatType.Numeric
-          ? Number(a[1][orderBy])
-          : a[1][orderBy];
-      const bStat =
-        statType === StatDescriptionStatType.Numeric
-          ? Number(b[1][orderBy])
-          : b[1][orderBy];
-      if (aStat === bStat) {
-        return 0;
-      }
-      if (order === "asc") {
-        return aStat < bStat ? -1 : 1;
-      }
-      return aStat > bStat ? -1 : 1;
-    });
-  }, [match?.stats, statDescriptions, orderBy, order]);
-
-  const handleSort = useCallback(
-    (fieldId: string) => {
-      if (fieldId === orderBy) {
-        setOrder(order === "asc" ? "desc" : "asc");
-      } else {
-        setOrder("desc");
-        setOrderBy(fieldId);
-      }
-    },
-    [order, orderBy]
-  );
-
   return (
-    <Container>
-      <Title text={`Match ${match.id}`} />
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Player</TableCell>
-            {statDescriptions.map((stat) => (
-              <TableCell key={stat.id}>
-                <TableSortLabel
-                  active={orderBy === stat.id}
-                  direction={orderBy === stat.id ? order : "desc"}
-                  onClick={() => handleSort(stat.id)}
-                >
-                  {stat.name}
-                </TableSortLabel>
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {sortedStats.map(
-            ([playerId, stats]: [string, Record<string, string>]) => {
-              const player = match.players.find((p) => p.id === playerId);
-
-              return (
-                <TableRow key={playerId}>
-                  <TableCell>{player?.name || player?.owner?.name}</TableCell>
-                  {statDescriptions.map((stat) => (
-                    <TableCell key={stat.id}>{stats[stat.id]}</TableCell>
-                  ))}
-                </TableRow>
-              );
-            }
-          )}
-        </TableBody>
-      </Table>
-    </Container>
+    <Stack spacing={2}>
+      <Typography variant="h5">Charts</Typography>
+      <MatchScoreDistributionBarChart match={match} />
+      <MatchPlayerPerformanceComparisonRadarChart match={match} />
+      <Divider />
+      <Typography variant="h5">Table</Typography>
+      <MatchTable match={match} />
+    </Stack>
   );
 };
 
